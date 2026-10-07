@@ -32,8 +32,16 @@ function NavDropdown({
   testid: string;
   onDark: boolean;
 }) {
+  // The panel opens on CSS hover/focus. After a link is clicked the pointer is still over the panel and the
+  // link keeps focus, so suppress it until the pointer leaves — otherwise it stays open over the new page.
+  const [dismissed, setDismissed] = useState(false);
+  const close = () => {
+    setDismissed(true);
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+  };
+
   return (
-    <div className="group relative">
+    <div className="group relative" onMouseLeave={() => setDismissed(false)}>
       <button
         type="button"
         data-testid={testid}
@@ -43,15 +51,20 @@ function NavDropdown({
         }`}
       >
         {label}
-        <ChevronDown className="h-3.5 w-3.5 transition-transform duration-300 group-hover:rotate-180" />
+        <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-300 ${dismissed ? "" : "group-hover:rotate-180"}`} />
       </button>
-      <div className="invisible absolute left-1/2 top-full z-50 w-[580px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+      <div
+        className={`invisible absolute left-1/2 top-full z-50 w-[580px] -translate-x-1/2 pt-4 opacity-0 transition-all duration-200 ${
+          dismissed ? "" : "group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
+        }`}
+      >
         <div className="grid grid-cols-2 gap-1 rounded-2xl border border-line bg-white p-3 shadow-2xl shadow-ink/10">
           {items.map((item) => (
             <Link
               key={item.to}
               to={item.to}
               data-testid={`dropdown-${item.to.split("/").pop()}`}
+              onClick={close}
               className="group/item flex flex-col gap-1 rounded-xl px-4 py-3 transition-colors hover:bg-soft"
             >
               <span className="text-sm font-bold text-ink transition-colors group-hover/item:text-brand-orange">
