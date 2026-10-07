@@ -7,15 +7,15 @@ const CONTENT: Record<string, { title: string; sections: { h: string; p: string 
   "/privacy": {
     title: "Privacy Policy",
     sections: [
-      { h: "What we collect", p: "When you submit a form on this website, we collect the details you provide — name, company, work email, phone number and project information — solely to respond to your enquiry." },
-      { h: "How we use it", p: "Your information is used to review your project requirements, contact you about your enquiry and, where relevant, prepare a proposal. We do not sell or share your data with third parties for marketing." },
+      { h: "What we collect", p: "When you submit a form on this website, we collect the details you provide — name, company, work email, phone number and campaign information — solely to respond to your enquiry." },
+      { h: "How we use it", p: "Your information is used to review your requirements, contact you about your enquiry and, where relevant, prepare a proposal. We do not sell or share your data with third parties for marketing." },
       { h: "Retention & your rights", p: "You may request access to, correction of, or deletion of your personal data at any time by contacting us. [Placeholder — replace with the official policy before launch.]" },
     ],
   },
   "/terms": {
     title: "Terms & Conditions",
     sections: [
-      { h: "Use of this website", p: "This website provides general information about Stream Biz project management services. Content is provided in good faith and does not constitute professional advice for any specific project." },
+      { h: "Use of this website", p: "This website provides general information about Stream Biz call center services. Content is provided in good faith and does not constitute professional advice for any specific campaign." },
       { h: "Engagements", p: "All services are provided under a separate written agreement defining scope, deliverables, timelines and fees. Nothing on this website constitutes a binding offer." },
       { h: "Liability", p: "[Placeholder — replace with the official terms before launch.]" },
     ],

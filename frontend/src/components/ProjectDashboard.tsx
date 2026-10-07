@@ -16,10 +16,10 @@ const CHART_DATA = [
 ];
 
 const RAG_ROWS = [
-  { label: "Schedule", value: 74, rag: "On Track", color: "bg-rag-green", text: "text-[#027A48]", bar: "bg-brand-navy" },
-  { label: "Budget", value: 92, rag: "Watch", color: "bg-rag-amber", text: "text-[#B54708]", bar: "bg-brand-orange" },
-  { label: "Risk", value: 40, rag: "Moderate", color: "bg-rag-amber", text: "text-[#B54708]", bar: "bg-rag-amber" },
-  { label: "Resources", value: 86, rag: "Healthy", color: "bg-rag-green", text: "text-[#027A48]", bar: "bg-brand-navy" },
+  { label: "Contact Rate", value: 74, rag: "On Target", color: "bg-rag-green", text: "text-[#027A48]", bar: "bg-brand-navy" },
+  { label: "QA Score", value: 92, rag: "Strong", color: "bg-rag-green", text: "text-[#027A48]", bar: "bg-brand-orange" },
+  { label: "Conversion", value: 40, rag: "Watch", color: "bg-rag-amber", text: "text-[#B54708]", bar: "bg-rag-amber" },
+  { label: "Attendance", value: 86, rag: "Healthy", color: "bg-rag-green", text: "text-[#027A48]", bar: "bg-brand-navy" },
 ];
 
 export default function ProjectDashboard() {
@@ -35,10 +35,10 @@ export default function ProjectDashboard() {
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-line bg-soft px-7 py-5">
         <div className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-navy font-heading text-xs font-extrabold text-white">PA</span>
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-navy font-heading text-xs font-extrabold text-white">SF</span>
           <div>
-            <p className="font-heading text-base font-extrabold text-ink">PROJECT ALPHA</p>
-            <p className="text-[11px] font-semibold uppercase tracking-wider text-faint">Sample delivery view</p>
+            <p className="font-heading text-base font-extrabold text-ink">CAMPAIGN ALPHA</p>
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-faint">Sample Salesforce dashboard</p>
           </div>
         </div>
         <div className="flex items-center gap-2.5">
@@ -54,7 +54,7 @@ export default function ProjectDashboard() {
         <div className="border-b border-line p-7 lg:border-b-0 lg:border-r">
           <div className="flex items-end justify-between">
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-faint">Completion</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-faint">Monthly target</p>
               <p className="mt-1 font-heading text-5xl font-extrabold tracking-tight text-brand-navy">
                 <CountUp to={74} suffix="%" />
               </p>
@@ -63,15 +63,15 @@ export default function ProjectDashboard() {
               <div className="flex items-center gap-2">
                 <AlertTriangle className="h-4 w-4 text-rag-amber" />
                 <div>
-                  <p className="font-heading text-lg font-extrabold text-ink"><CountUp to={6} /></p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Open risks</p>
+                  <p className="font-heading text-lg font-extrabold text-ink"><CountUp to={18} /></p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Hot leads</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
                 <CircleAlert className="h-4 w-4 text-brand-orange" />
                 <div>
-                  <p className="font-heading text-lg font-extrabold text-ink"><CountUp to={3} /></p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Open issues</p>
+                  <p className="font-heading text-lg font-extrabold text-ink"><CountUp to={42} /></p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Callbacks due</p>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@ export default function ProjectDashboard() {
 
         {/* Right: chart + milestones */}
         <div className="p-7">
-          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-faint">Progress vs plan</p>
+          <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-faint">Qualified leads vs target</p>
           <div className="mt-3 h-36" aria-hidden="true">
             <ResponsiveContainer width="100%" height="100%">
               <AreaChart data={CHART_DATA} margin={{ top: 4, right: 4, left: -22, bottom: 0 }}>
@@ -122,7 +122,7 @@ export default function ProjectDashboard() {
                 <XAxis dataKey="w" tick={{ fontSize: 10, fill: "#667085" }} axisLine={false} tickLine={false} />
                 <YAxis tick={{ fontSize: 10, fill: "#667085" }} axisLine={false} tickLine={false} unit="%" />
                 <Tooltip
-                  formatter={(value: number, name: string) => [`${value}%`, name === "actual" ? "Actual" : "Planned"]}
+                  formatter={(value: number, name: string) => [`${value}%`, name === "actual" ? "Actual" : "Target"]}
                   labelFormatter={(label: string) => `Week ${label.replace("W", "")}`}
                   contentStyle={{ borderRadius: 12, border: "1px solid #E2E6EF", fontSize: 12 }}
                 />
@@ -133,7 +133,7 @@ export default function ProjectDashboard() {
           </div>
 
           <p className="mt-5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-faint">
-            <Flag className="h-3.5 w-3.5" /> Upcoming milestones
+            <Flag className="h-3.5 w-3.5" /> Launch milestones
           </p>
           <div className="mt-3 flex flex-col">
             {DASHBOARD_MILESTONES.map((m) => (

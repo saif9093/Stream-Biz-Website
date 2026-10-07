@@ -20,8 +20,8 @@ export function DeliveryToolkit() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <SectionHeading
           eyebrow="How We're Different"
-          title="A complete delivery toolkit — not just a project manager."
-          sub="Most firms send a person. We bring a proven system: the controls that make a project visible, and the operating rhythm that keeps it on course."
+          title="A complete campaign toolkit — not just a team of callers."
+          sub="Many call centers just supply seats. We bring a proven system: the tools that make a campaign visible in Salesforce, and the daily rhythm that keeps it on target."
         />
 
         <Reveal delay={0.1} className="mt-10">
@@ -148,8 +148,8 @@ export function SupportModels({ showPricingLink = true }: { showPricingLink?: bo
         <SectionHeading
           center
           eyebrow="Choose Your Support"
-          title="Choose your team structure."
-          sub="Start with the level of support your project needs today, and scale up or down as it moves through its phases."
+          title="Choose your team model."
+          sub="Start with the team size your campaign needs today, and scale up or down as volumes change."
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -167,7 +167,7 @@ export function SupportModels({ showPricingLink = true }: { showPricingLink?: bo
                     <h3 className="font-heading text-[1.65rem] font-extrabold tracking-tight text-ink">{s.name}</h3>
                     <ArrowRight className="h-5 w-5 shrink-0 text-brand-orange transition-transform duration-300 group-hover:translate-x-1.5" />
                   </div>
-                  <p className="text-base font-semibold text-ink">Project Team</p>
+                  <p className="text-base font-semibold text-ink">Team Model</p>
                   <p className="text-[15px] leading-[1.85] text-faint">{s.text}</p>
                   <span className="mt-auto inline-flex w-fit rounded-full bg-brand-orange-soft px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-brand-orange-dark">
                     {s.tag}
@@ -258,7 +258,7 @@ export function Testimonials() {
           eyebrow="Client Voices"
           center
           title="Don't just take our word for it."
-          sub="What the people we deliver alongside say about working with Stream Biz."
+          sub="What the clients whose campaigns we run say about working with Stream Biz."
         />
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (

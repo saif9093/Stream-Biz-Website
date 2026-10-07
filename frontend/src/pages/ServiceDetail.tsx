@@ -16,7 +16,7 @@ const SERVICE_SECTIONS = [
   { id: "challenge", label: "Challenge" },
   { id: "approach", label: "Approach" },
   { id: "deliverables", label: "Deliverables" },
-  { id: "engagement", label: "Engagement" },
+  { id: "engagement", label: "How It Works" },
   { id: "impact", label: "Impact" },
   { id: "faqs", label: "FAQs" },
 ];
@@ -45,7 +45,7 @@ export default function ServiceDetail() {
         <motion.img
           key={service.slug}
           src={serviceImage(service.slug)}
-          alt={`${service.title} — Stream Biz project delivery`}
+          alt={`${service.title} — Stream Biz call center`}
           className="absolute inset-0 h-full w-full object-cover"
           initial={{ scale: 1.12, opacity: 0 }}
           animate={{ scale: 1.02, opacity: 1 }}
@@ -205,7 +205,7 @@ export default function ServiceDetail() {
       {/* How Engagement Works */}
       <section id="engagement" className="scroll-mt-24 bg-soft py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading eyebrow="How Engagement Works" title="Five steps from first call to controlled delivery." />
+          <SectionHeading eyebrow="How It Works" title="Five steps from first call to live campaign." />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {ENGAGEMENT_STEPS.map((step, i) => (
               <Reveal key={step.num} delay={i * 0.08}>
@@ -268,9 +268,9 @@ export default function ServiceDetail() {
       </section>
 
       <CTASection
-        eyebrow="Need stronger project control?"
+        eyebrow="Ready to launch?"
         title={`Talk to us about ${service.title.toLowerCase()}.`}
-        sub="Tell us where your project stands and we'll show you exactly how this service would apply."
+        sub="Tell us about your customers and goals and we'll show you exactly how this service would work for you."
         primaryLabel="Talk to a Project Manager"
         primaryTo="/contact"
         secondaryLabel="Start a Project"

@@ -97,7 +97,7 @@ export default function ArticleDetail() {
                   <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Written by</p>
                   <p className="mt-1 font-heading text-base font-extrabold text-ink">{article.author}</p>
                   <p className="mt-1 text-sm text-faint">
-                    Practical project management thinking from the Stream Biz delivery team.
+                    Practical thinking from the Stream Biz call center operations team.
                   </p>
                 </div>
               </Reveal>
@@ -146,8 +146,8 @@ export default function ArticleDetail() {
 
       <CTASection
         eyebrow="Put it into practice"
-        title="Reading helps. Structure delivers."
-        sub="Talk to us about applying these disciplines to your live project."
+        title="Reading helps. A managed campaign delivers."
+        sub="Talk to us about putting these ideas to work on your next campaign."
       />
     </>
   );

@@ -7,29 +7,29 @@ import CTASection from "@/components/CTASection";
 import { VALUES } from "@/data/site";
 
 const COMMITMENTS = [
-  { icon: UserCheck, title: "Senior people, hands-on", text: "Experienced project professionals do the work — not a pitch team that hands over to juniors." },
-  { icon: Handshake, title: "Embedded in your team", text: "We sit inside your governance and delivery rhythm, working alongside your people rather than around them." },
-  { icon: Eye, title: "One honest view", text: "Progress, cost, risk and decisions reported plainly, so leadership can act early instead of reacting late." },
-  { icon: Repeat, title: "Capability that stays", text: "Templates, controls and know-how are handed over so your team can sustain delivery without us." },
+  { icon: UserCheck, title: "A named project manager", text: "Every client campaign has one accountable owner for targets, team, scripts and reporting." },
+  { icon: Handshake, title: "An extension of your team", text: "Our agents represent your brand on every call, trained on your products and working to your standards." },
+  { icon: Eye, title: "Live Salesforce visibility", text: "Calls, leads, meetings, sales and quality scores in live dashboards — no waiting for month-end reports." },
+  { icon: Repeat, title: "Better every week", text: "Call reviews, coaching and script tests mean results keep improving for as long as the campaign runs." },
 ];
 
 export default function About() {
   usePageMeta(
-    "About Stream Biz | Project Management Services",
-    "Stream Biz is a project management and project delivery services company built on one belief: better project management starts with better visibility."
+    "About Stream Biz | Dubai Call Center",
+    "Stream Biz is a Dubai call center that runs outbound sales, lead generation, appointment setting and customer support projects for clients — every campaign managed in Salesforce."
   );
 
   return (
     <>
       <PageHero
         eyebrow="About Stream Biz"
-        title="Better project management starts with better visibility."
-        sub="Stream Biz is a professional project management and project delivery services company. We help organizations plan, control, coordinate and successfully deliver complex projects."
+        title="A call center that runs every client campaign as a managed project."
+        sub="Stream Biz is a Dubai-based call center. Companies hire us to call their prospects and customers — selling, qualifying leads, booking meetings and providing support — and we manage each campaign end to end in Salesforce."
         meta={[
-          { value: "Delivery-led", label: "Practitioners who run projects, not observers" },
-          { value: "8 services", label: "Specialist disciplines under one team" },
-          { value: "Visibility first", label: "One honest view of progress and risk" },
-          { value: "Built to transfer", label: "Capability stays with your team" },
+          { value: "Dubai-based", label: "English and Arabic-speaking agent teams" },
+          { value: "8 services", label: "From outbound sales to customer support" },
+          { value: "Salesforce-first", label: "Every lead, call and case in one CRM" },
+          { value: "Project-managed", label: "A named manager on every campaign" },
         ]}
       />
 
@@ -39,21 +39,21 @@ export default function About() {
           <Reveal className="flex flex-col gap-5">
             <h2 className="font-heading text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Our story</h2>
             <p className="text-base leading-relaxed text-faint">
-              Stream Biz was founded on a pattern its team had seen across industries: capable organizations, committed
-              people and important projects — undermined not by effort but by missing structure. Plans that didn't
-              reflect reality. Risks that surfaced too late. Leadership flying on instruments nobody trusted.
+              Stream Biz was founded on a pattern its team had seen again and again in outsourced calling: agents working
+              hard, but campaigns with no clear owner. Scripts that drifted after launch. Leads lost in spreadsheets.
+              Clients who only found out what happened when the monthly report arrived.
             </p>
             <p className="text-base leading-relaxed text-faint">
-              We built Stream Biz to be the partner that fixes that: senior project professionals who establish the
-              structure, visibility and accountability a project needs to move forward with confidence — and who leave
-              that capability behind in your team.
+              We built Stream Biz to fix that. Every client campaign is run as a project — with a named project manager,
+              a trained agent team, approved scripts and a Salesforce workspace where every call and outcome is
+              recorded. Clients see results live, and agents get the coaching to keep improving.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
             <div className="overflow-hidden rounded-3xl border border-line shadow-2xl shadow-brand-navy/10">
               <img
-                src="/media/about-team.jpg"
-                alt="Stream Biz project team in a delivery review session"
+                src="/media/hero-3-planning.jpg"
+                alt="Stream Biz team leader briefing call center agents before a shift"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -68,16 +68,16 @@ export default function About() {
           <Reveal className="flex flex-col gap-5">
             <h2 className="font-heading text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Our philosophy</h2>
             <p className="text-base leading-relaxed text-faint">
-              Methodology serves delivery — never the reverse. We apply the minimum structure that creates real control,
-              and we measure our work by one standard: projects that finish, delivering what was promised.
+              Dials are a means, not the goal. We measure ourselves on what clients actually care about — qualified
+              leads, booked meetings, closed sales, resolved cases and customers who stay.
             </p>
           </Reveal>
           <Reveal delay={0.1} className="flex flex-col gap-5">
             <h2 className="font-heading text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">Who we are</h2>
             <p className="text-base leading-relaxed text-faint">
-              A team of project directors, planners, controllers and PMO specialists who have run delivery from the
-              inside — across construction, technology, engineering, healthcare and corporate transformation. We work
-              as part of your team, not adjacent to it.
+              A team of call center agents, team leaders, project managers, quality analysts and Salesforce specialists
+              working from our Dubai office — running campaigns for clients in real estate, finance, telecom,
+              healthcare, e-commerce, technology, education and travel.
             </p>
             <div>
               <Link to="/how-we-work" data-testid="about-methodology-link" className="inline-flex items-center gap-2 text-sm font-bold text-brand-orange transition-colors hover:text-brand-orange-dark">
@@ -92,7 +92,7 @@ export default function About() {
       {/* Values */}
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading eyebrow="Our Values" title="What we hold every engagement to." />
+          <SectionHeading eyebrow="Our Values" title="What we hold every campaign to." />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {VALUES.map((value, i) => (
               <Reveal key={value.title} delay={(i % 3) * 0.08}>
@@ -118,8 +118,8 @@ export default function About() {
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl border border-white/15 shadow-2xl shadow-black/40">
               <img
-                src="/media/svc-project-management.jpg"
-                alt="Stream Biz project manager leading a project kickoff"
+                src="/media/svc-quality-assurance.jpg"
+                alt="Stream Biz quality coach reviewing a recorded call with an agent"
                 loading="lazy"
                 className="aspect-[4/5] w-full object-cover sm:aspect-[4/3] lg:aspect-[4/5]"
               />
@@ -127,7 +127,7 @@ export default function About() {
               <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-xl">
                 <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-brand-orange">Our promise</p>
                 <p className="mt-2 font-heading text-lg font-extrabold leading-snug text-white">
-                  Structure that stays with your team long after we leave.
+                  Every call measured. Every agent coached. Every client informed.
                 </p>
               </div>
             </div>
@@ -136,10 +136,10 @@ export default function About() {
             <Reveal className="flex flex-col gap-5">
               <Eyebrow dark>Working With Us</Eyebrow>
               <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-[2.6rem]">
-                What every engagement looks like.
+                What every campaign looks like.
               </h2>
               <p className="max-w-xl text-base leading-relaxed text-white/70">
-                However large or small the brief, the same four commitments shape how we work alongside your people.
+                However large or small the campaign, the same four commitments shape how we work for every client.
               </p>
             </Reveal>
             <div className="grid gap-4 sm:grid-cols-2">
@@ -167,8 +167,8 @@ export default function About() {
 
       <CTASection
         eyebrow="Work with us"
-        title="Bring senior delivery experience to your project."
-        sub="Start the conversation — we'll show you how our team would approach your specific situation."
+        title="Put a managed call center team behind your next campaign."
+        sub="Start the conversation — we'll show you how our team, scripts and Salesforce setup would work for your campaign."
       />
     </>
   );

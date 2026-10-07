@@ -6,8 +6,8 @@ import { SITE_FAQS } from "@/data/site";
 
 export default function Faq() {
   usePageMeta(
-    "FAQ | Stream Biz Project Management Services",
-    "Answers to common questions about Stream Biz project management services, engagement models, PMO support, project recovery and reporting."
+    "FAQ | Stream Biz Call Center Services",
+    "Answers to common questions about Stream Biz call center services, Salesforce, call quality, languages, launch times and careers."
   );
 
   return (
@@ -15,7 +15,7 @@ export default function Faq() {
       <PageHero
         eyebrow="FAQ"
         title="Straight answers to practical questions."
-        sub="The questions organizations ask before bringing in project management support — answered directly."
+        sub="The questions clients — and job candidates — ask most about Stream Biz, answered directly."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -27,7 +27,7 @@ export default function Faq() {
       </section>
       <CTASection
         eyebrow="Still have questions?"
-        title="Ask us about your specific project."
+        title="Ask us about your specific campaign."
         sub="General answers only go so far — a short conversation about your situation goes further."
       />
     </>

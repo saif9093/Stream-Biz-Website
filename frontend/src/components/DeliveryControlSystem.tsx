@@ -9,7 +9,7 @@ export default function DeliveryControlSystem() {
     <div className="grid items-center gap-10 lg:grid-cols-[1fr_auto_1fr]" data-testid="delivery-control-system">
       {/* Inputs */}
       <div className="flex flex-col gap-2.5">
-        <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">Inputs — what every project carries</p>
+        <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">Inputs — what every campaign needs</p>
         {DELIVERY_INPUTS.map((input, i) => {
           const Icon = getIcon(input.icon);
           return (
@@ -59,10 +59,10 @@ export default function DeliveryControlSystem() {
             <p className="font-heading text-lg font-extrabold leading-tight tracking-tight text-white">
               STREAM BIZ
               <br />
-              <span className="text-brand-orange">DELIVERY CONTROL</span>
+              <span className="text-brand-orange">CAMPAIGN ENGINE</span>
             </p>
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/50">
-              Structure · Visibility · Accountability
+              People · Process · Salesforce
             </p>
           </div>
         </motion.div>
@@ -71,7 +71,7 @@ export default function DeliveryControlSystem() {
 
       {/* Outputs */}
       <div className="flex flex-col gap-2.5">
-        <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">Outputs — what leadership gets</p>
+        <p className="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/50">Outputs — what clients get</p>
         {DELIVERY_OUTPUTS.map((output, i) => (
           <motion.div
             key={output}

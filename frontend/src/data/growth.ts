@@ -1,5 +1,5 @@
-// Content for the conversion sections added after the reference-site review:
-// delivery toolkit, support structures, service tiers, testimonials, careers.
+// Content for the conversion sections: campaign toolkit, team models, service tiers,
+// testimonials, careers.
 // Testimonials and anything client-specific stay as [PLACEHOLDERS] until real content is supplied.
 
 export interface ToolkitItem {
@@ -12,32 +12,32 @@ export interface ToolkitItem {
 export const TOOLKIT_TABS: { key: string; tab: string; intro: string; cta: { label: string; to: string }; items: ToolkitItem[] }[] = [
   {
     key: "controls",
-    tab: "The Controls We Install",
+    tab: "What We Set Up",
     intro:
-      "Within the first weeks of an engagement we stand up a connected set of controls — each one feeding the next, so the whole project runs from one version of the truth.",
-    cta: { label: "Explore Project Controls", to: "/services/project-controls-reporting" },
+      "Before the first call goes out, every campaign gets a connected set of tools — all running in Salesforce, so the whole project works from one version of the truth.",
+    cta: { label: "Explore Salesforce CRM Operations", to: "/services/salesforce-crm" },
     items: [
-      { icon: "calendar", label: "Integrated Schedule", title: "One plan everyone works to", text: "A logic-linked master schedule connecting scope, resources, contractors and dependencies — baselined, so slippage is measured rather than argued about." },
-      { icon: "wallet", label: "Cost & Commitments", title: "Know the cost position live", text: "Budget, commitments, actuals and forecast tracked together, so overruns show up as early warnings instead of month-end surprises." },
-      { icon: "risk", label: "Risk & Issue Register", title: "Every risk has an owner", text: "A living register with named owners, response actions and review dates — reviewed weekly, not written once at kickoff and forgotten." },
-      { icon: "workflow", label: "Change Control", title: "No change without impact", text: "Every scope change is assessed for cost, schedule and risk impact before approval, with a clear audit trail of who decided what." },
-      { icon: "messages", label: "Decision Log", title: "Decisions made, recorded, actioned", text: "Stakeholder decisions captured with context and owners, so the same question is never debated twice and accountability is visible." },
-      { icon: "report", label: "Executive Dashboard", title: "Leadership sees it first", text: "A one-page view of progress, cost, risk and milestones — built around the decisions leadership needs to make, not the data teams happen to have." },
+      { icon: "clipboard", label: "Campaign Plan", title: "One plan everyone works to", text: "Goals, targets, team size, hours and launch dates agreed with you up front — so success is defined before the first dial." },
+      { icon: "messages", label: "Scripts & Call Flows", title: "The right words on every call", text: "Tested scripts, call flows and objection handling for every call type, version-controlled so agents always use the latest one." },
+      { icon: "cloud", label: "Salesforce Workspace", title: "Every call in one record", text: "Leads, contacts, cases, call logs and outcomes captured in Salesforce, with fields and stages built around your campaign." },
+      { icon: "database", label: "Clean Call Lists", title: "Lists worth calling", text: "Data cleaned, de-duplicated and segmented before calling starts, with do-not-call rules applied automatically." },
+      { icon: "shield", label: "QA Scorecard", title: "Quality you can measure", text: "A scorecard agreed with you, used to score sampled calls every week and drive agent coaching." },
+      { icon: "report", label: "Live Dashboard", title: "Results you see first", text: "A live Salesforce dashboard of calls, contacts, leads, meetings, sales and quality — no waiting for a monthly report." },
     ],
   },
   {
     key: "rhythm",
-    tab: "Our Delivery Rhythm",
+    tab: "Our Daily Rhythm",
     intro:
-      "Controls only work when they are used. We run a steady operating rhythm that keeps every team, vendor and sponsor moving in the same direction, week after week.",
+      "Tools only work when they're used. Every campaign runs on a steady daily and weekly rhythm that keeps agents, team leaders and your team pulling in the same direction.",
     cta: { label: "See How We Work", to: "/how-we-work" },
     items: [
-      { icon: "target", label: "Rapid Mobilization", title: "Up and running in weeks", text: "A structured start: current-position review, stakeholder map and a mobilization plan that establishes control without stopping work in flight." },
-      { icon: "eye", label: "Weekly Measurement", title: "Progress measured, not reported", text: "Progress captured against the baseline every week from real project data, so status reflects reality rather than optimism." },
-      { icon: "users", label: "Coordination Forums", title: "The right people, the right meeting", text: "Short, purposeful forums for delivery teams, vendors and contractors — each with a clear agenda, inputs and outputs." },
-      { icon: "alert", label: "Escalation Path", title: "Problems surface early", text: "A defined route for issues to reach the people who can solve them, with thresholds that trigger escalation before it becomes a crisis." },
-      { icon: "shield", label: "Governance Cadence", title: "Sponsors decide, on time", text: "A predictable steering rhythm that puts the right decisions in front of sponsors with the evidence to make them." },
-      { icon: "trending", label: "Continuous Improvement", title: "Every phase gets sharper", text: "Lessons captured at each stage and fed back into the plan and controls, so delivery capability keeps improving across the life of the project." },
+      { icon: "target", label: "Fast Launch", title: "Live in weeks, not months", text: "A launch checklist covering hiring, training, Salesforce setup and data — with a pilot group going live first." },
+      { icon: "users", label: "Daily Huddles", title: "Every shift starts focused", text: "Short team huddles to share targets, script updates and yesterday's wins and lessons." },
+      { icon: "headset", label: "Live Call Listening", title: "Coaching in the moment", text: "Team leaders listen to live and recorded calls and give agents specific feedback the same day." },
+      { icon: "alert", label: "Escalation Path", title: "Problems fixed fast", text: "A clear route for complaints, technical issues and hot leads to reach the right person in minutes." },
+      { icon: "calendar", label: "Weekly Client Review", title: "You always know where you stand", text: "A weekly call with your project manager to review results, quality and next week's priorities." },
+      { icon: "trending", label: "Continuous Improvement", title: "Better results every week", text: "Script tests, list refreshes and coaching plans driven by the data, so performance keeps climbing." },
     ],
   },
 ];
@@ -45,98 +45,117 @@ export const TOOLKIT_TABS: { key: string; tab: string; intro: string; cta: { lab
 export const SUPPORT_STRUCTURES = [
   {
     key: "fractional",
-    name: "Fractional",
-    tag: "Targeted expertise",
-    text: "Senior project leadership for a set number of days each week. Ideal when you need experienced oversight, governance or controls without a full-time hire.",
-    points: ["Part-time senior project lead", "Governance and reporting set-up", "Mentoring for your internal team"],
+    name: "Shared Team",
+    tag: "Flexible capacity",
+    text: "Trained agents shared across a small number of campaigns. Ideal for pilots, overflow support or lower call volumes.",
+    points: ["Pay for the hours you need", "Fast start with trained agents", "Shared team leader and QA"],
   },
   {
     key: "dedicated",
-    name: "Dedicated",
-    tag: "Day-to-day delivery",
-    text: "A dedicated project manager and controls support embedded in your team, running day-to-day delivery so your people can focus on their specialist work.",
-    points: ["Full-time embedded project manager", "Planning, controls and reporting operated for you", "Vendor and contractor coordination"],
+    name: "Dedicated Team",
+    tag: "Most popular",
+    text: "A dedicated team of agents who work only on your campaign, trained on your products and led by a named project manager.",
+    points: ["Agents who know your brand", "Named project manager", "Dedicated QA and weekly reporting"],
   },
   {
     key: "programme",
-    name: "Programme & PMO",
-    tag: "Portfolio scale",
-    text: "A multi-disciplinary team for complex programmes and portfolios — programme leadership, PMO, planners and controllers working as one delivery function.",
-    points: ["Programme director and PMO lead", "Portfolio-wide standards and dashboards", "Capability transfer to your organization"],
+    name: "Multi-Campaign Program",
+    tag: "Enterprise scale",
+    text: "Several campaigns run together — for example sales, support and retention — with shared Salesforce reporting and one account lead.",
+    points: ["Account director across campaigns", "Combined Salesforce dashboards", "Cross-campaign insights"],
   },
 ];
 
 export const SERVICE_TIERS = [
   {
     num: "Tier 1",
-    name: "Visibility",
-    summary: "Controls & reporting",
-    line1: "Project",
-    line2: "visibility",
-    text: "We establish the plan, controls and reporting so leadership finally has one reliable view of progress, cost and risk.",
-    includes: ["Integrated schedule and baseline", "Cost and commitment tracking", "Risk and issue register", "Weekly status and executive dashboard"],
+    name: "Launch",
+    summary: "Agents + scripts + reporting",
+    line1: "Trained agents",
+    line2: "on your campaign",
+    text: "A trained agent team working from approved scripts, with every call logged and a weekly report on activity and results.",
+    includes: ["Trained agent team", "Approved scripts and call flows", "Call logging in Salesforce", "Weekly activity and results report"],
   },
   {
     num: "Tier 2",
-    name: "Control",
-    summary: "Visibility + delivery leadership",
-    line1: "Project visibility",
-    line2: "& delivery leadership",
-    text: "Everything in Visibility, plus hands-on project leadership that drives the delivery rhythm and resolves problems before they escalate.",
-    includes: ["Everything in Tier 1", "Embedded project leadership", "Stakeholder and vendor coordination", "Change control and decision management"],
+    name: "Managed",
+    summary: "Launch + project management & QA",
+    line1: "A managed campaign",
+    line2: "with QA & live dashboards",
+    text: "Everything in Launch, plus a named project manager, structured quality assurance and live Salesforce dashboards.",
+    includes: ["Everything in Tier 1", "Named project manager", "QA scoring and agent coaching", "Live Salesforce dashboards"],
     featured: true,
   },
   {
     num: "Tier 3",
-    name: "Assurance",
-    summary: "Control + governance & PMO",
-    line1: "Visibility, delivery leadership",
-    line2: "& governance assurance",
-    text: "Everything in Control, plus portfolio governance, independent assurance and the PMO capability to make good delivery repeatable.",
-    includes: ["Everything in Tier 2", "PMO design and operation", "Stage-gate and independent reviews", "Capability transfer to internal teams"],
+    name: "Growth",
+    summary: "Managed + Salesforce ops & optimization",
+    line1: "Multi-channel growth",
+    line2: "& Salesforce operations",
+    text: "Everything in Managed, plus Salesforce configuration and automation, multi-campaign programs and ongoing optimization.",
+    includes: ["Everything in Tier 2", "Salesforce setup and automation", "Multi-campaign programs", "Script and list optimization"],
   },
 ];
 
 /** Comparison matrix for the pricing page: feature → which tiers include it. */
 export const TIER_MATRIX: { feature: string; tiers: [boolean, boolean, boolean] }[] = [
-  { feature: "Integrated master schedule & baseline", tiers: [true, true, true] },
-  { feature: "Cost, commitment & forecast tracking", tiers: [true, true, true] },
-  { feature: "Risk & issue register with owners", tiers: [true, true, true] },
-  { feature: "Executive dashboard & weekly reporting", tiers: [true, true, true] },
-  { feature: "Embedded project leadership", tiers: [false, true, true] },
-  { feature: "Vendor & contractor coordination", tiers: [false, true, true] },
-  { feature: "Change control & decision log", tiers: [false, true, true] },
-  { feature: "PMO design & operation", tiers: [false, false, true] },
-  { feature: "Stage-gate & independent assurance reviews", tiers: [false, false, true] },
-  { feature: "Portfolio-level governance & reporting", tiers: [false, false, true] },
-  { feature: "Capability transfer & team coaching", tiers: [false, false, true] },
+  { feature: "Trained, dedicated agent team", tiers: [true, true, true] },
+  { feature: "Approved scripts & call flows", tiers: [true, true, true] },
+  { feature: "Every call logged in Salesforce", tiers: [true, true, true] },
+  { feature: "Weekly activity & results report", tiers: [true, true, true] },
+  { feature: "Named project manager", tiers: [false, true, true] },
+  { feature: "QA call scoring & agent coaching", tiers: [false, true, true] },
+  { feature: "Live Salesforce dashboards", tiers: [false, true, true] },
+  { feature: "Salesforce configuration & automation", tiers: [false, false, true] },
+  { feature: "Multi-campaign programs", tiers: [false, false, true] },
+  { feature: "Script A/B tests & list optimization", tiers: [false, false, true] },
+  { feature: "Monthly leadership review", tiers: [false, false, true] },
 ];
 
 export const PRICING_FACTORS = [
-  { icon: "layers", title: "Project scale & complexity", text: "Number of workstreams, contractors and interfaces we need to coordinate." },
-  { icon: "calendar", title: "Duration & stage", text: "Whether we join at planning, mid-delivery or recovery — and for how long." },
-  { icon: "users", title: "Team structure", text: "Fractional, dedicated or programme-scale support, and the mix of roles." },
-  { icon: "shield", title: "Governance needs", text: "Board, regulator or funder reporting requirements and assurance depth." },
+  { icon: "users", title: "Team size & hours", text: "How many agents you need, and which days, hours and time zones they cover." },
+  { icon: "headset", title: "Campaign type", text: "Outbound sales, lead generation, appointment setting, support or retention." },
+  { icon: "messages", title: "Languages & channels", text: "English, Arabic or other languages, and whether we cover calls, email and chat." },
+  { icon: "cloud", title: "Salesforce setup", text: "Whether we work in your Salesforce org or configure one for the campaign." },
 ];
 
+// DRAFT testimonials: written to reflect typical client feedback. Replace each with a real, client-approved
+// quote (and name/company if the client agrees) before the site goes live.
 export const TESTIMONIALS = [
-  { quote: "[CLIENT TESTIMONIAL — a short quote on how Stream Biz brought visibility and control to the project.]", name: "[CLIENT NAME]", role: "[ROLE], [COMPANY]", sector: "Construction & Infrastructure" },
-  { quote: "[CLIENT TESTIMONIAL — a short quote on the reporting, governance or recovery outcome achieved.]", name: "[CLIENT NAME]", role: "[ROLE], [COMPANY]", sector: "Technology & Digital" },
-  { quote: "[CLIENT TESTIMONIAL — a short quote on working alongside the internal team and capability left behind.]", name: "[CLIENT NAME]", role: "[ROLE], [COMPANY]", sector: "Healthcare" },
+  {
+    quote: "Our launch enquiries used to sit in inboxes for days. Stream Biz now calls every new lead within the hour, books the viewings and logs everything in Salesforce — our sales team finally knows which campaigns actually sell units.",
+    name: "Head of Sales",
+    role: "Property Developer, Dubai",
+    sector: "Real Estate",
+  },
+  {
+    quote: "We handed over our support line during a busy product launch. Queues came down, every case was tracked in Service Cloud, and the weekly QA reviews gave us real confidence in how our customers were being treated.",
+    name: "Customer Experience Manager",
+    role: "Telecom Provider, UAE",
+    sector: "Telecom",
+  },
+  {
+    quote: "Our account executives were spending half their week prospecting. Now Stream Biz books qualified demos straight into their calendars, and the Salesforce dashboard shows exactly where every meeting came from.",
+    name: "VP of Sales",
+    role: "B2B Software Company",
+    sector: "Technology & SaaS",
+  },
 ];
 
 export const HOME_FAQ_COUNT = 6;
 
 export const CAREER_VALUES = [
-  { icon: "target", title: "Work that matters", text: "Lead projects that change how hospitals, cities and organizations operate — not reports that sit on a shelf." },
-  { icon: "users", title: "Senior-led teams", text: "Learn alongside experienced project directors who still do the work, with real mentoring and room to grow." },
-  { icon: "layers", title: "Variety across sectors", text: "Move between construction, technology, healthcare and transformation, building breadth few roles offer." },
-  { icon: "trending", title: "Grow your craft", text: "Structured development in planning, controls, governance and leadership, with support for professional certification." },
+  { icon: "headset", title: "Real projects, real clients", text: "Work on live campaigns for brands across real estate, finance, telecom, healthcare and more — every shift makes a visible difference." },
+  { icon: "users", title: "Training from day one", text: "Paid product and script training, daily huddles and one-to-one coaching from experienced team leaders." },
+  { icon: "cloud", title: "Learn Salesforce", text: "Use Salesforce every day — a CRM skill employers across the world look for." },
+  { icon: "trending", title: "Clear path to grow", text: "Move from agent to senior agent, QA analyst, team leader or project coordinator based on performance." },
 ];
 
 export const CAREER_ROLES = [
-  { title: "Project Manager", type: "Full-time / Contract", area: "Project Delivery" },
-  { title: "Project Controls Analyst", type: "Full-time", area: "Controls & Reporting" },
-  { title: "Planner / Scheduler", type: "Full-time / Contract", area: "Planning & Scheduling" },
-  { title: "PMO Analyst", type: "Full-time", area: "PMO & Governance" },
+  { title: "Call Center Agent (English / Arabic)", type: "Full-time", area: "Outbound & Inbound Campaigns" },
+  { title: "Sales Development Representative", type: "Full-time", area: "Lead Generation & Appointment Setting" },
+  { title: "Customer Support Executive", type: "Full-time / Shifts", area: "Inbound Support" },
+  { title: "Team Leader", type: "Full-time", area: "Campaign Operations" },
+  { title: "Quality Analyst", type: "Full-time", area: "Quality Assurance" },
+  { title: "Salesforce Administrator", type: "Full-time", area: "CRM Operations" },
 ];

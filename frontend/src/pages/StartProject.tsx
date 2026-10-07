@@ -7,15 +7,15 @@ import { NEXT_STEPS } from "@/data/site";
 export default function StartProject() {
   usePageMeta(
     "Start a Project | Stream Biz",
-    "Tell us about your project — its goals, constraints and stage — and a senior project professional will identify where Stream Biz can make the biggest difference."
+    "Tell us about your campaign — what you sell, who you want to reach and your Salesforce setup — and we'll propose the right team and launch plan."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Start a Project"
-        title="Tell us what you're delivering."
-        sub="The more we know about your project — its stage, stakeholders and constraints — the faster we can identify where structure and control will make the biggest difference."
+        title="Tell us about your campaign."
+        sub="The more we know — what you sell, who you want to reach, expected volumes and your Salesforce setup — the faster we can propose the right team and launch plan."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1.25fr_1fr] lg:px-8">
@@ -45,14 +45,14 @@ export default function StartProject() {
               <div className="rounded-3xl border border-dashed border-line bg-soft p-8">
                 <h2 className="font-heading text-base font-extrabold tracking-tight text-ink">Prefer to diagnose first?</h2>
                 <p className="mt-2 text-sm leading-relaxed text-faint">
-                  Take the two-minute Project Health Check and bring the results to the conversation.
+                  Take the two-minute Call Center Health Check and bring the results to the conversation.
                 </p>
                 <a
                   href="/project-health-check"
                   data-testid="start-health-check-link"
                   className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-brand-orange transition-colors hover:text-brand-orange-dark"
                 >
-                  Take the Project Health Check
+                  Take the Health Check
                 </a>
               </div>
             </Reveal>

@@ -6,21 +6,21 @@ import { SERVICES } from "@/data/services";
 
 export default function Services() {
   usePageMeta(
-    "Project Management Services | Stream Biz",
-    "Eight specialist project management services — from end-to-end delivery leadership and PMO governance to project controls, planning, risk and delivery assurance."
+    "Call Center Services | Stream Biz",
+    "Eight managed call center services — outbound sales, lead generation, appointment setting, customer support, retention, Salesforce CRM operations and quality assurance."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Our Services"
-        title="Project management built around your reality."
-        sub="Every project has different constraints, stakeholders and delivery expectations. Our services are designed to provide the structure and expertise needed at the stage where you need it most."
+        title="Call center projects, managed end to end."
+        sub="Companies hire Stream Biz to call their prospects and customers. Each service below is run as a managed project — with trained agents, a named project manager and every call recorded in Salesforce."
         meta={[
-          { value: "8 services", label: "Specialist disciplines, one accountable team" },
-          { value: "6 phases", label: "A structured path from kickoff to closeout" },
-          { value: "1 source of truth", label: "Every stakeholder sees the same picture" },
-          { value: "Any stage", label: "Engaged from concept through recovery" },
+          { value: "8 services", label: "Sales, support and CRM under one team" },
+          { value: "6 steps", label: "From client brief to live campaign" },
+          { value: "Salesforce", label: "Every lead, call and case in one place" },
+          { value: "EN / AR", label: "English and Arabic-speaking agents" },
         ]}
       />
       <section className="bg-white py-20 sm:py-24">
@@ -34,9 +34,9 @@ export default function Services() {
       </section>
       <CTASection
         eyebrow="Not sure where to start?"
-        title="Tell us about the project — we'll identify the right support."
-        sub="A short consultation is usually enough to pinpoint where structure, controls or leadership will make the biggest difference."
-        secondaryLabel="Take the Project Health Check"
+        title="Tell us about your campaign — we'll recommend the right service."
+        sub="A short call is usually enough to agree the right team size, scripts and Salesforce setup."
+        secondaryLabel="Take the Health Check"
         secondaryTo="/project-health-check"
       />
     </>

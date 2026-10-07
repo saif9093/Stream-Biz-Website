@@ -15,7 +15,7 @@ export default function IndustryDetail() {
   const industry = slug ? getIndustry(slug) : undefined;
 
   usePageMeta(
-    industry ? `${industry.title} Project Management | Stream Biz` : "Industry | Stream Biz",
+    industry ? `${industry.title} Call Center Services | Stream Biz` : "Industry | Stream Biz",
     industry?.short
   );
 
@@ -63,7 +63,7 @@ export default function IndustryDetail() {
             </nav>
             <Eyebrow dark>Industry expertise</Eyebrow>
             <h1 className="font-heading text-4xl font-extrabold leading-[1.03] tracking-tight text-white drop-shadow-[0_2px_24px_rgba(0,0,0,0.3)] sm:text-6xl">
-              Project management for <span className="text-brand-orange">{industry.title.toLowerCase()}.</span>
+              Call center campaigns for <span className="text-brand-orange">{industry.title.toLowerCase()}.</span>
             </h1>
             <p className="max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">{industry.intro}</p>
             <div className="mt-2 flex flex-wrap items-center gap-4">
@@ -106,11 +106,11 @@ export default function IndustryDetail() {
         </div>
       </section>
 
-      {/* Challenges + typical projects */}
+      {/* Challenges + typical campaigns */}
       <section className="bg-white py-20 sm:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16 lg:px-8">
           <div>
-            <SectionHeading eyebrow="Typical Challenges" title="What makes delivery hard here." className="max-w-none" />
+            <SectionHeading eyebrow="Typical Challenges" title="What makes calling hard here." className="max-w-none" />
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {industry.challenges.map((challenge, i) => (
                 <Reveal key={challenge} delay={i * 0.06} className="h-full">
@@ -136,9 +136,9 @@ export default function IndustryDetail() {
                 aria-hidden="true"
               />
               <div className="relative flex flex-col gap-6">
-                <Eyebrow dark>Typical Projects</Eyebrow>
+                <Eyebrow dark>Typical Campaigns</Eyebrow>
                 <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-white">
-                  The work we support.
+                  The calls we make for this sector.
                 </h2>
                 <ul className="flex flex-col">
                   {industry.typical.map((item) => (
@@ -155,7 +155,7 @@ export default function IndustryDetail() {
                   to="/contact"
                   className="mt-2 inline-flex w-fit items-center gap-2 text-sm font-bold text-white transition-colors hover:text-brand-orange"
                 >
-                  Discuss your project
+                  Discuss your campaign
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -202,9 +202,9 @@ export default function IndustryDetail() {
       </section>
 
       <CTASection
-        eyebrow={`Delivering in ${industry.title.toLowerCase()}?`}
-        title="Let's talk about your project's reality."
-        sub="We'll bring the structure, controls and delivery experience your sector demands."
+        eyebrow={`Calling customers in ${industry.title.toLowerCase()}?`}
+        title="Let's talk about your customers."
+        sub="We'll bring trained agents, sector-ready scripts and a Salesforce setup built for your industry."
       />
     </>
   );

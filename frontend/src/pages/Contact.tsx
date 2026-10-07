@@ -8,15 +8,15 @@ import { NEXT_STEPS, OFFICE, officeDirections, officeMapEmbed } from "@/data/sit
 export default function Contact() {
   usePageMeta(
     "Contact Stream Biz | Request a Consultation",
-    "Tell us what you're working on and we'll help identify where stronger project management can make the biggest difference."
+    "Tell us about your campaign and we'll recommend the right call center team, scripts and Salesforce setup."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's bring clarity to your next project."
-        sub="Tell us what you're working on and we'll help identify where stronger project management can make the biggest difference."
+        title="Let's launch your next campaign."
+        sub="Tell us about your campaign and we'll recommend the right call center team, scripts and Salesforce setup."
       />
       <section className="bg-white py-16 sm:py-20">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1.25fr_1fr] lg:px-8">

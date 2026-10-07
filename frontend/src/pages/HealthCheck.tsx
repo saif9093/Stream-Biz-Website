@@ -7,23 +7,24 @@ import { PageHero, Eyebrow, btnPrimary } from "@/components/Section";
 import { Reveal, CountUp, EASE } from "@/components/Reveal";
 import { apiPost } from "@/lib/api";
 import { HEALTH_QUESTIONS } from "@/data/site";
+import { PROJECT_TYPES, SIZES, STAGES } from "@/lib/formOptions";
 
-const CATEGORIES = ["Planning", "Schedule", "Budget", "Risk", "Governance"];
+const CATEGORIES = ["Planning", "Team", "CRM", "Quality", "Reporting"];
 const inputCls =
   "w-full rounded-xl border border-line bg-white px-4 py-3 text-sm text-ink placeholder:text-faint/60 transition-colors focus:border-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-navy/15";
 
 const ADVICE: Record<string, string> = {
-  Planning: "Your project would benefit most from a tighter scope baseline and a plan the whole team commits to.",
-  Schedule: "Schedule confidence is your weakest area — dates need bottom-up validation and active dependency management.",
-  Budget: "Cost visibility needs strengthening: track commitments, not just invoices, and forecast honestly every week.",
-  Risk: "Your project shows strength elsewhere but needs stronger risk visibility — a living register with named owners and early escalation.",
-  Governance: "Governance is the gap: clearer decision rights and one trusted source of truth for leadership would change the trajectory.",
+  Planning: "Your campaign would benefit most from clear, agreed targets and an approved, version-controlled script every agent works from.",
+  Team: "Your team is the gap: structured training, mock-call certification and regular coaching would lift results quickly.",
+  CRM: "Your data needs attention: logging every call and outcome in Salesforce, with clean lists, would make every other area easier.",
+  Quality: "Quality is your weakest area — a QA scorecard, weekly call sampling and a fast escalation path would protect your brand.",
+  Reporting: "Reporting is the gap: live dashboards that trace leads and sales back to campaigns would give managers one trusted view.",
 };
 
 export default function HealthCheck() {
   usePageMeta(
-    "Project Health Check | Stream Biz",
-    "How healthy is your project? Answer ten focused questions and get an instant visual score across planning, schedule, budget, risk and governance."
+    "Call Center Health Check | Stream Biz",
+    "How healthy is your call center operation? Answer ten focused questions and get an instant score across planning, team, CRM, quality and reporting."
   );
 
   const [step, setStep] = useState(-1); // -1 intro, 0..9 questions, 10 results
@@ -64,7 +65,7 @@ export default function HealthCheck() {
     try {
       await apiPost("/health-check", { ...form, scores: categoryScores, totalScore });
       setSubmitted(true);
-      toast.success("Your project health results have been sent. We'll be in touch.");
+      toast.success("Your health check results have been sent. We'll be in touch.");
     } catch {
       toast.error("Something went wrong. Please try again.");
     } finally {
@@ -75,12 +76,12 @@ export default function HealthCheck() {
   return (
     <>
       <PageHero
-        eyebrow="Project Health Check"
-        title="How healthy is your project?"
-        sub="Ten focused questions across planning, schedule, budget, risk and governance — and an instant, honest score. This is an indicative self-assessment, not an industry certification."
+        eyebrow="Call Center Health Check"
+        title="How healthy is your calling operation?"
+        sub="Ten focused questions across planning, team, CRM, quality and reporting — and an instant, honest score. This is an indicative self-assessment, not an industry certification."
         meta={[
-          { value: "10 questions", label: "Two per delivery area" },
-          { value: "5 areas", label: "Planning, schedule, budget, risk, governance" },
+          { value: "10 questions", label: "Two per area" },
+          { value: "5 areas", label: "Planning, team, CRM, quality, reporting" },
           { value: "~2 minutes", label: "No sign-up needed to see your score" },
           { value: "Instant score", label: "A visual read you can share internally" },
         ]}
@@ -108,7 +109,7 @@ export default function HealthCheck() {
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed text-faint">
-                  You'll answer two questions per area. For each, pick the statement closest to your project's reality —
+                  You'll answer two questions per area. For each, pick the statement closest to how your calling operation runs today —
                   honesty gets you a useful result. It takes about two minutes.
                 </p>
                 <button type="button" data-testid="health-check-start" onClick={() => setStep(0)} className={btnPrimary}>
@@ -221,7 +222,7 @@ export default function HealthCheck() {
                       </div>
                       <div>
                         <p className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-brand-orange">
-                          Project Health
+                          Call Center Health
                         </p>
                         <p className="mt-2 font-heading text-4xl font-extrabold tracking-tight text-white">
                           {totalScore}
@@ -270,41 +271,41 @@ export default function HealthCheck() {
                 {/* Lead form */}
                 {!submitted ? (
                   <form onSubmit={submit} className="rounded-3xl border border-line bg-soft p-8 sm:p-10" data-testid="health-lead-form">
-                    <Eyebrow>Discuss Your Project</Eyebrow>
+                    <Eyebrow>Discuss Your Results</Eyebrow>
                     <h2 className="mt-4 font-heading text-2xl font-extrabold tracking-tight text-ink">
                       Want a professional read on these results?
                     </h2>
                     <p className="mt-2 text-sm leading-relaxed text-faint">
-                      Share your details and a senior project professional will review your score with you — and where
-                      stronger controls would make the biggest difference.
+                      Share your details and a senior member of our operations team will review your score with you — and
+                      show where better scripts, coaching or Salesforce reporting would make the biggest difference.
                     </p>
                     <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <input data-testid="health-name" required placeholder="Name *" value={form.name} onChange={set("name")} className={inputCls} aria-label="Name" />
                       <input data-testid="health-company" required placeholder="Company *" value={form.company} onChange={set("company")} className={inputCls} aria-label="Company" />
                       <input data-testid="health-email" required type="email" placeholder="Work email *" value={form.email} onChange={set("email")} className={inputCls} aria-label="Work email" />
                       <input data-testid="health-phone" placeholder="Phone" value={form.phone} onChange={set("phone")} className={inputCls} aria-label="Phone" />
-                      <select data-testid="health-project-type" value={form.projectType} onChange={set("projectType")} className={inputCls} aria-label="Project type">
-                        <option value="">Project type</option>
-                        {["New build / construction", "Digital / technology", "Infrastructure", "Transformation programme", "Fit-out / relocation", "Multi-project portfolio", "Other"].map((t) => (
+                      <select data-testid="health-project-type" value={form.projectType} onChange={set("projectType")} className={inputCls} aria-label="Campaign type">
+                        <option value="">Campaign type</option>
+                        {PROJECT_TYPES.map((t) => (
                           <option key={t} value={t}>{t}</option>
                         ))}
                       </select>
-                      <select data-testid="health-stage" value={form.projectStage} onChange={set("projectStage")} className={inputCls} aria-label="Project stage">
-                        <option value="">Project stage</option>
-                        {["Idea / concept", "Feasibility", "Planning", "In delivery", "At risk / recovery", "Closeout"].map((t) => (
+                      <select data-testid="health-stage" value={form.projectStage} onChange={set("projectStage")} className={inputCls} aria-label="Where are you today?">
+                        <option value="">Where are you today?</option>
+                        {STAGES.map((t) => (
                           <option key={t} value={t}>{t}</option>
                         ))}
                       </select>
-                      <select data-testid="health-budget" value={form.budgetRange} onChange={set("budgetRange")} className={`${inputCls} sm:col-span-2`} aria-label="Budget range (optional)">
-                        <option value="">Budget range (optional)</option>
-                        {["Under 100k", "100k – 500k", "500k – 2M", "2M – 10M", "10M+", "Prefer not to say"].map((t) => (
+                      <select data-testid="health-budget" value={form.budgetRange} onChange={set("budgetRange")} className={`${inputCls} sm:col-span-2`} aria-label="Team size (optional)">
+                        <option value="">Team size (optional)</option>
+                        {SIZES.map((t) => (
                           <option key={t} value={t}>{t}</option>
                         ))}
                       </select>
                     </div>
                     <button type="submit" data-testid="health-submit" disabled={submitting} className={`${btnPrimary} mt-6`}>
                       {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
-                      {submitting ? "Sending..." : "Discuss Your Project"}
+                      {submitting ? "Sending..." : "Discuss My Results"}
                     </button>
                   </form>
                 ) : (
@@ -314,7 +315,7 @@ export default function HealthCheck() {
                       <h2 className="font-heading text-2xl font-extrabold text-ink">Results received.</h2>
                       <p className="max-w-md text-sm leading-relaxed text-faint">
                         Thank you, {form.name}. We've logged your health score of {totalScore}/100 and will be in touch
-                        to walk through what it means for your project.
+                        to walk through what it means for your calling operation.
                       </p>
                     </div>
                   </Reveal>

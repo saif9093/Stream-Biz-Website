@@ -12,11 +12,10 @@ export default function NotFound() {
       <div className="relative mx-auto flex max-w-2xl flex-col items-start gap-6 px-6">
         <span className="font-mono text-sm font-bold text-brand-orange" data-testid="not-found-code">404</span>
         <h1 className="font-heading text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          This milestone doesn't exist.
+          This number isn't in service.
         </h1>
         <p className="text-base leading-relaxed text-white/70">
-          The page you're looking for has moved, been re-baselined, or never made it past planning. Let's get you back
-          on the critical path.
+          The page you're looking for has moved or never existed. Let's transfer you back to the right line.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link to="/" data-testid="not-found-home" className={btnPrimary}>

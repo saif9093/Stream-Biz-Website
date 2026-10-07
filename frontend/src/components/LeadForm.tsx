@@ -54,8 +54,8 @@ export default function LeadForm({ source, showServices = true }: { source: stri
         <CheckCircle2 className="relative h-10 w-10 text-rag-green" />
         <h3 className="relative font-heading text-2xl font-extrabold text-white">Request received.</h3>
         <p className="relative max-w-md text-sm leading-relaxed text-white/70 md:text-base">
-          Thank you, {form.firstName}. We've received your project details and will review your requirements, identify
-          the right areas of support and get in touch to schedule a consultation.
+          Thank you, {form.firstName}. We've received your campaign details and will review your requirements, recommend
+          the right team and Salesforce setup, and get in touch to schedule a call.
         </p>
         <span className="relative mt-2 h-2.5 w-32 bg-ticks opacity-50" aria-hidden="true" />
       </div>
@@ -94,16 +94,16 @@ export default function LeadForm({ source, showServices = true }: { source: stri
         </select>
       </div>
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="projectType" className={labelCls}>Project Type</label>
+        <label htmlFor="projectType" className={labelCls}>Campaign Type</label>
         <select id="projectType" data-testid="lead-project-type" value={form.projectType} onChange={set("projectType")} className={inputCls}>
-          <option value="">Select project type</option>
+          <option value="">Select campaign type</option>
           {PROJECT_TYPES.map((t) => (
             <option key={t} value={t}>{t}</option>
           ))}
         </select>
       </div>
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="projectStage" className={labelCls}>Current Project Stage</label>
+        <label htmlFor="projectStage" className={labelCls}>Where Are You Today?</label>
         <select id="projectStage" data-testid="lead-stage" value={form.projectStage} onChange={set("projectStage")} className={inputCls}>
           <option value="">Select stage</option>
           {STAGES.map((t) => (
@@ -112,7 +112,7 @@ export default function LeadForm({ source, showServices = true }: { source: stri
         </select>
       </div>
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="projectSize" className={labelCls}>Estimated Project Size</label>
+        <label htmlFor="projectSize" className={labelCls}>Estimated Team Size</label>
         <select id="projectSize" data-testid="lead-size" value={form.projectSize} onChange={set("projectSize")} className={inputCls}>
           <option value="">Select size</option>
           {SIZES.map((t) => (
@@ -121,7 +121,7 @@ export default function LeadForm({ source, showServices = true }: { source: stri
         </select>
       </div>
       <div className="flex flex-col gap-1.5">
-        <label htmlFor="timeline" className={labelCls}>Expected Timeline</label>
+        <label htmlFor="timeline" className={labelCls}>When Do You Want to Launch?</label>
         <select id="timeline" data-testid="lead-timeline" value={form.timeline} onChange={set("timeline")} className={inputCls}>
           <option value="">Select timeline</option>
           {TIMELINES.map((t) => (
@@ -164,7 +164,7 @@ export default function LeadForm({ source, showServices = true }: { source: stri
           value={form.message}
           onChange={set("message")}
           className={inputCls}
-          placeholder="Tell us about your project — goals, constraints, stakeholders, and where you need support."
+          placeholder="Tell us about your campaign — what you sell, who you want to reach, call volumes, languages and your Salesforce setup."
         />
       </div>
       <div className="sm:col-span-2">

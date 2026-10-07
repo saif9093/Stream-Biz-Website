@@ -8,15 +8,15 @@ import { TEAM } from "@/data/site";
 export default function Team() {
   usePageMeta(
     "Our Team | Stream Biz",
-    "Meet the team behind your project — senior project delivery professionals across programme leadership, PMO, project controls and digital delivery."
+    "Meet the Stream Biz leadership team — the people behind our call center operations, quality, training and Salesforce."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Our Team"
-        title="Meet the team behind your project."
-        sub="Senior project professionals with delivery experience across industries. Profile details are placeholders until individual bios are confirmed — nothing here is invented."
+        title="Meet the team behind every campaign."
+        sub="The people who lead our call center operations, quality, training and Salesforce. Profile details are placeholders until individual bios are confirmed — nothing here is invented."
       />
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -62,8 +62,8 @@ export default function Team() {
       </section>
       <CTASection
         eyebrow="The people make the difference"
-        title="Put senior delivery experience on your project."
-        sub="Tell us what you're delivering and we'll match the right people to it."
+        title="Put a managed call center team on your campaign."
+        sub="Tell us about your campaign and we'll match the right team to it."
       />
     </>
   );

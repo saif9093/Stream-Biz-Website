@@ -1,26 +1,26 @@
 import { motion } from "motion/react";
-import { ArrowRight, CalendarRange, FileText, Gauge, Milestone, TrendingUp, Users, X, Check, type LucideIcon } from "lucide-react";
+import { ArrowRight, CalendarRange, FileText, Gauge, Headset, TrendingUp, Users, X, Check, type LucideIcon } from "lucide-react";
 import { EASE, Reveal } from "./Reveal";
 import { Eyebrow } from "./Section";
 import { TRANSFORM_STEPS } from "@/data/site";
 
 const ICONS: Record<string, LucideIcon> = {
   PLAN: CalendarRange,
-  ALIGN: Users,
-  CONTROL: Gauge,
-  DELIVER: Milestone,
+  BUILD: Users,
+  RUN: Headset,
+  MEASURE: Gauge,
   IMPROVE: TrendingUp,
 };
 
 // Card heights climb left → right so the row reads as a staircase from complexity to control.
 const STEP_HEIGHT = ["lg:min-h-[360px]", "lg:min-h-[392px]", "lg:min-h-[424px]", "lg:min-h-[456px]", "lg:min-h-[488px]"];
 
-const BEFORE = ["Plans that drift from reality", "Status that depends on who you ask", "Risks found when they become issues"];
-const AFTER = ["A baseline everyone delivers to", "One honest view of progress and cost", "Problems surfaced while they're small"];
+const BEFORE = ["Scripts that drift after launch", "Results you hear about at month-end", "Poor calls nobody listens to"];
+const AFTER = ["One approved script every agent uses", "Live Salesforce results, every day", "Calls scored and agents coached weekly"];
 
 const title = (k: string) => k.charAt(0) + k.slice(1).toLowerCase();
 
-/** "The Stream Biz Difference" — five disciplines shown as a rising staircase. */
+/** "The Stream Biz Difference" — five campaign steps shown as a rising staircase. */
 export default function DifferenceSection() {
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-32" data-testid="difference-section">
@@ -31,10 +31,10 @@ export default function DifferenceSection() {
           <Reveal className="flex flex-col gap-5">
             <Eyebrow>The Stream Biz Difference</Eyebrow>
             <h2 className="font-heading text-3xl font-extrabold leading-[1.06] tracking-tight text-ink sm:text-4xl lg:text-[3.1rem]">
-              From project complexity to <span className="text-brand-orange">controlled execution.</span>
+              From client brief to <span className="text-brand-orange">measurable results.</span>
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-faint md:text-lg">
-              Five disciplines run through everything we deliver — each one leaves behind a concrete artifact your team keeps.
+              Five steps run through every campaign we manage — each one leaves behind something concrete you keep.
             </p>
           </Reveal>
           <Reveal delay={0.1}>

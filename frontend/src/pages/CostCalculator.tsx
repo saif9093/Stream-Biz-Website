@@ -55,38 +55,41 @@ function Slider({
 
 export default function CostCalculator() {
   usePageMeta(
-    "Cost of Delay Calculator | Stream Biz",
-    "Estimate what schedule slippage and cost overruns could cost your project — and how much value stronger project controls could protect."
+    "Missed Revenue Calculator | Stream Biz",
+    "Estimate what missed leads, lost customers and messy CRM data cost your business each month — and how much a managed call center campaign could recover."
   );
 
-  const [budget, setBudget] = useState(5_000_000);
-  const [duration, setDuration] = useState(18);
-  const [slip, setSlip] = useState(3);
-  const [overrun, setOverrun] = useState(10);
-  const [benefit, setBenefit] = useState(100_000);
-  const [recovery, setRecovery] = useState(30);
+  const [leads, setLeads] = useState(1_000);
+  const [missed, setMissed] = useState(30);
+  const [conversion, setConversion] = useState(8);
+  const [dealValue, setDealValue] = useState(1_500);
+  const [churn, setChurn] = useState(20);
+  const [customerValue, setCustomerValue] = useState(3_000);
+  const [agents, setAgents] = useState(10);
+  const [hoursLost, setHoursLost] = useState(4);
+  const [hourlyCost, setHourlyCost] = useState(12);
+  const [recovery, setRecovery] = useState(40);
 
   const r = useMemo(() => {
-    const monthlyRun = budget / duration;
-    const delayCost = monthlyRun * slip;
-    const overrunCost = budget * (overrun / 100);
-    const lostBenefit = benefit * slip;
-    const exposure = delayCost + overrunCost + lostBenefit;
-    return { monthlyRun, delayCost, overrunCost, lostBenefit, exposure, protectedValue: exposure * (recovery / 100) };
-  }, [budget, duration, slip, overrun, benefit, recovery]);
+    const missedLeads = leads * (missed / 100) * (conversion / 100) * dealValue;
+    const lostCustomers = churn * customerValue;
+    const wastedTime = agents * hoursLost * hourlyCost * 4.3;
+    const exposure = missedLeads + lostCustomers + wastedTime;
+    return { missedLeads, lostCustomers, wastedTime, exposure, protectedValue: exposure * (recovery / 100) };
+  }, [leads, missed, conversion, dealValue, churn, customerValue, agents, hoursLost, hourlyCost, recovery]);
 
   const bars = [
-    { label: "Extended running costs", v: r.delayCost, color: "bg-brand-navy" },
-    { label: "Cost overrun", v: r.overrunCost, color: "bg-brand-orange" },
-    { label: "Delayed benefits", v: r.lostBenefit, color: "bg-[#8E9BC7]" },
+    { label: "Leads never followed up", v: r.missedLeads, color: "bg-brand-navy" },
+    { label: "Customers lost to slow service", v: r.lostCustomers, color: "bg-brand-orange" },
+    { label: "Agent time lost to manual admin", v: r.wastedTime, color: "bg-[#8E9BC7]" },
   ];
 
   return (
     <>
       <PageHero
-        eyebrow="Cost of Delay Calculator"
-        title="What is a late project really costing you?"
-        sub="Slipping dates and creeping costs add up faster than most dashboards show. Enter a few numbers to see your project's exposure — and how much value stronger controls could protect."
+        eyebrow="Missed Revenue Calculator"
+        title="What are missed calls really costing you?"
+        sub="Leads that are never called back, customers who leave after a bad experience and agents buried in admin add up fast. Enter a few numbers to see your monthly exposure."
       />
 
       <section className="bg-soft py-20 sm:py-24" data-testid="cost-calculator">
@@ -94,35 +97,29 @@ export default function CostCalculator() {
           <Reveal>
             <div className="flex flex-col gap-8 rounded-3xl border border-line bg-white p-7 sm:p-10">
               <div>
-                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-brand-orange">Your project</p>
-                <h2 className="mt-2 font-heading text-2xl font-extrabold tracking-tight text-ink">Enter your numbers</h2>
+                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-brand-orange">Your business</p>
+                <h2 className="mt-2 font-heading text-2xl font-extrabold tracking-tight text-ink">Enter your monthly numbers</h2>
               </div>
-              <Slider testid="calc-budget" label="Total project budget" value={budget} min={250_000} max={100_000_000} step={250_000} onChange={setBudget} format={money} />
-              <Slider testid="calc-duration" label="Planned duration" value={duration} min={3} max={60} step={1} onChange={setDuration} format={(v) => `${v} months`} />
-              <Slider testid="calc-slip" label="Expected schedule slip" value={slip} min={0} max={24} step={1} onChange={setSlip} format={(v) => `${v} months`} hint="How late do you realistically expect to finish against plan?" />
-              <Slider testid="calc-overrun" label="Expected cost overrun" value={overrun} min={0} max={60} step={1} onChange={setOverrun} format={(v) => `${v}%`} />
-              <Slider
-                testid="calc-benefit"
-                label="Monthly benefit once live"
-                value={benefit}
-                min={0}
-                max={5_000_000}
-                step={25_000}
-                onChange={setBenefit}
-                format={money}
-                hint="Revenue, savings or value the finished project delivers each month. Set to $0 if not applicable."
-              />
+              <Slider testid="calc-leads" label="New leads or enquiries per month" value={leads} min={50} max={20_000} step={50} onChange={setLeads} format={(v) => v.toLocaleString("en-US")} />
+              <Slider testid="calc-missed" label="Leads not contacted within a day" value={missed} min={0} max={80} step={1} onChange={setMissed} format={(v) => `${v}%`} hint="Leads that are never called, or called too late to still be interested." />
+              <Slider testid="calc-conversion" label="Conversion rate when contacted" value={conversion} min={1} max={40} step={1} onChange={setConversion} format={(v) => `${v}%`} />
+              <Slider testid="calc-deal" label="Average sale value" value={dealValue} min={50} max={50_000} step={50} onChange={setDealValue} format={money} />
+              <Slider testid="calc-churn" label="Customers lost per month" value={churn} min={0} max={500} step={1} onChange={setChurn} format={(v) => `${v}`} hint="Customers who leave or don't renew because nobody followed up or service was slow." />
+              <Slider testid="calc-customer-value" label="Average customer value" value={customerValue} min={50} max={100_000} step={50} onChange={setCustomerValue} format={money} />
+              <Slider testid="calc-agents" label="Agents or sales reps" value={agents} min={1} max={200} step={1} onChange={setAgents} format={(v) => `${v}`} />
+              <Slider testid="calc-hours" label="Hours per person per week on manual admin" value={hoursLost} min={0} max={15} step={1} onChange={setHoursLost} format={(v) => `${v} h`} hint="Logging calls by hand, fixing duplicates, building reports in spreadsheets." />
+              <Slider testid="calc-hourly" label="Hourly cost per person" value={hourlyCost} min={5} max={60} step={1} onChange={setHourlyCost} format={money} />
               <div className="rounded-2xl border border-dashed border-brand-orange/40 bg-brand-orange-soft/50 p-5">
                 <Slider
                   testid="calc-recovery"
-                  label="Share of exposure recovered by stronger controls"
+                  label="Share recovered by a managed campaign"
                   value={recovery}
                   min={0}
                   max={80}
                   step={5}
                   onChange={setRecovery}
                   format={(v) => `${v}%`}
-                  hint="Your assumption — adjust it to match your own view. It drives the 'value protected' estimate only."
+                  hint="Your assumption — adjust it to match your own view. It drives the 'revenue recovered' estimate only."
                 />
               </div>
             </div>
@@ -133,11 +130,11 @@ export default function CostCalculator() {
               <div className="bg-grid-dark pointer-events-none absolute inset-0" aria-hidden="true" />
               <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-brand-orange/25 blur-3xl" aria-hidden="true" />
               <div className="relative">
-                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/50">Total exposure</p>
+                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-white/50">Monthly revenue at risk</p>
                 <p className="mt-2 font-heading text-5xl font-extrabold tracking-tight text-white sm:text-6xl" data-testid="calc-exposure">
                   {money(r.exposure)}
                 </p>
-                <p className="mt-2 text-sm text-white/60">Running costs: {money(r.monthlyRun)} per month</p>
+                <p className="mt-2 text-sm text-white/60">About {money(r.exposure * 12)} a year</p>
               </div>
               <div className="relative flex flex-col gap-4">
                 {bars.map((b) => (
@@ -153,13 +150,13 @@ export default function CostCalculator() {
                 ))}
               </div>
               <div className="relative rounded-2xl border border-brand-orange/40 bg-brand-orange/10 p-6">
-                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-brand-orange">Value protected at {recovery}%</p>
+                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-brand-orange">Revenue recovered at {recovery}%</p>
                 <p className="mt-2 font-heading text-4xl font-extrabold tracking-tight text-white" data-testid="calc-protected">
-                  {money(r.protectedValue)}
+                  {money(r.protectedValue)} <span className="text-lg text-white/50">/ month</span>
                 </p>
               </div>
               <Link to="/start-a-project" className={`relative ${btnPrimary}`}>
-                Talk to us about protecting it
+                Talk to us about recovering it
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <p className="relative flex items-start gap-2 text-xs leading-relaxed text-white/45">
@@ -173,12 +170,12 @@ export default function CostCalculator() {
 
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <SectionHeading eyebrow="How It's Calculated" title="Three ways delay quietly costs money." />
+          <SectionHeading eyebrow="How It's Calculated" title="Three ways missed calls quietly cost money." />
           <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
-              { t: "Extended running costs", d: "Every extra month keeps the team, site, vendors and overheads running. We estimate this as your budget divided by planned months, multiplied by the expected slip." },
-              { t: "Cost overrun", d: "Rework, change and inefficiency push spend past budget. We apply your expected overrun percentage to the total budget." },
-              { t: "Delayed benefits", d: "Value the project should be producing — revenue, savings or capacity — arrives later. We multiply your monthly benefit by the months of slip." },
+              { t: "Leads never followed up", d: "Interested prospects who are never called, or called too late. We multiply your monthly leads by the share missed, your conversion rate and your average sale value." },
+              { t: "Customers lost to slow service", d: "Customers who leave or don't renew because nobody followed up. We multiply customers lost per month by your average customer value." },
+              { t: "Agent time lost to manual admin", d: "Hours spent logging calls by hand, fixing duplicates and building reports. We multiply people × weekly hours × hourly cost × 4.3 weeks." },
             ].map((x, i) => (
               <Reveal key={x.t} delay={i * 0.08} className="h-full">
                 <div className="flex h-full flex-col gap-3 rounded-2xl border border-line bg-soft p-7">
@@ -194,8 +191,8 @@ export default function CostCalculator() {
 
       <CTASection
         eyebrow="Know where you stand"
-        title="Turn exposure into a plan."
-        sub="Our Project Health Check and free Project Snapshot show exactly where control is weakest — and what to fix first."
+        title="Turn missed calls into a plan."
+        sub="Our Call Center Health Check and free Campaign Snapshot show exactly where leads and customers are slipping away — and what to fix first."
         primaryLabel="Take the Health Check"
         primaryTo="/project-health-check"
         secondaryLabel="Start a Project"

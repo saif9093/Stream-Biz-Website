@@ -27,8 +27,8 @@ const columns = [
   {
     title: "Resources",
     links: [
-      { to: "/project-health-check", label: "Project Health Check" },
-      { to: "/cost-of-delay-calculator", label: "Cost of Delay Calculator" },
+      { to: "/project-health-check", label: "Call Center Health Check" },
+      { to: "/cost-of-delay-calculator", label: "Missed Revenue Calculator" },
       { to: "/engagement-models", label: "Engagement Models" },
       { to: "/insights", label: "Templates & Guides" },
       { to: "/faq", label: "FAQ" },
@@ -45,8 +45,8 @@ export default function Footer() {
           <div className="col-span-2 flex flex-col gap-5">
             <Logo dark className="h-20" />
             <p className="max-w-xs text-sm leading-relaxed text-white/60">
-              Stream Biz helps organizations plan, manage and control critical projects with disciplined project
-              management, practical governance and real-time visibility.
+              Stream Biz is a Dubai call center that runs outbound sales, lead generation and customer support
+              projects for clients — every campaign managed end to end in Salesforce.
             </p>
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
               <a
@@ -77,7 +77,7 @@ export default function Footer() {
               data-testid="footer-health-check-cta"
               className="mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-xs font-bold text-white transition-colors hover:border-brand-orange hover:text-brand-orange"
             >
-              Run a Project Health Check
+              Run a Call Center Health Check
               <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>

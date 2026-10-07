@@ -9,10 +9,18 @@ import { apiPost } from "@/lib/api";
 import { getIcon } from "@/lib/icons";
 import { CAREER_ROLES, CAREER_VALUES } from "@/data/growth";
 
+const SHIFT = [
+  { t: "Team huddle", d: "Your team leader shares today's targets, any script updates and yesterday's wins." },
+  { t: "Calls in Salesforce", d: "You call leads or customers from your campaign list, following an approved script and logging every outcome in Salesforce." },
+  { t: "Follow-ups and callbacks", d: "You book meetings, schedule callbacks and pass hot leads or escalations to the right person." },
+  { t: "Coaching and QA", d: "Recorded calls are scored against a quality scorecard, and you get specific feedback to improve." },
+  { t: "Results you can see", d: "Live dashboards show your calls, contacts and conversions against the team target." },
+];
+
 export default function Careers() {
   usePageMeta(
     "Careers | Stream Biz",
-    "Build your project delivery career at Stream Biz — senior-led teams, varied sectors and work that matters."
+    "Join Stream Biz in Dubai — call center agent, sales, support, team leader, QA and Salesforce roles with paid training and a clear path to grow."
   );
 
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", company: "", projectType: "", message: "" });
@@ -43,8 +51,8 @@ export default function Careers() {
     <>
       <PageHero
         eyebrow="Careers"
-        title="Build a career delivering projects that matter."
-        sub="Join a team of project professionals who bring structure, visibility and accountability to complex work across construction, technology, healthcare and transformation."
+        title="Build your career on the Stream Biz call center floor."
+        sub="Stream Biz is a Dubai call center. Companies hire us to call their prospects and customers — and our agents, team leaders, QA analysts and Salesforce specialists run those campaigns as managed projects."
       />
 
       <section className="bg-white py-20 sm:py-24">
@@ -66,6 +74,36 @@ export default function Careers() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="band-dark grain relative overflow-hidden py-20 sm:py-24" data-testid="careers-day">
+        <div className="bg-grid-dark pointer-events-none absolute inset-0" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+          <Reveal className="flex flex-col gap-5">
+            <SectionHeading
+              dark
+              eyebrow="Before Your Interview"
+              title="What you'd actually do here."
+              sub="Each client — a property developer, a bank, a telecom provider, a clinic — gives us a campaign. A project manager plans it, a team of agents runs it, and every call and result is recorded in Salesforce."
+              className="max-w-none"
+            />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <ol className="flex flex-col gap-4">
+              {SHIFT.map((item, i) => (
+                <li key={item.t} className="flex gap-5 rounded-2xl border border-white/12 bg-white/[0.05] p-5">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-orange font-mono text-xs font-bold text-white">
+                    0{i + 1}
+                  </span>
+                  <div>
+                    <p className="font-heading text-base font-extrabold text-white">{item.t}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-white/65">{item.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
         </div>
       </section>
 
@@ -116,7 +154,7 @@ export default function Careers() {
                 <label className="flex flex-col gap-1.5"><span className={labelCls}>First name *</span><input required value={form.firstName} onChange={set("firstName")} className={inputCls} /></label>
                 <label className="flex flex-col gap-1.5"><span className={labelCls}>Last name *</span><input required value={form.lastName} onChange={set("lastName")} className={inputCls} /></label>
                 <label className="flex flex-col gap-1.5"><span className={labelCls}>Email *</span><input required type="email" value={form.email} onChange={set("email")} className={inputCls} /></label>
-                <label className="flex flex-col gap-1.5"><span className={labelCls}>Current company *</span><input required value={form.company} onChange={set("company")} className={inputCls} /></label>
+                <label className="flex flex-col gap-1.5"><span className={labelCls}>Current or last employer *</span><input required value={form.company} onChange={set("company")} className={inputCls} /></label>
                 <label className="flex flex-col gap-1.5 sm:col-span-2">
                   <span className={labelCls}>Role of interest</span>
                   <select value={form.projectType} onChange={set("projectType")} className={inputCls}>
@@ -127,7 +165,7 @@ export default function Careers() {
                 </label>
                 <label className="flex flex-col gap-1.5 sm:col-span-2">
                   <span className={labelCls}>Experience & LinkedIn</span>
-                  <textarea rows={4} value={form.message} onChange={set("message")} className={inputCls} placeholder="A short summary of your experience and a link to your LinkedIn profile." />
+                  <textarea rows={4} value={form.message} onChange={set("message")} className={inputCls} placeholder="A short summary of your experience (call center, sales, support or Salesforce), languages you speak, and a link to your LinkedIn profile." />
                 </label>
                 <div className="sm:col-span-2">
                   <button type="submit" disabled={submitting} className={`${btnPrimary} disabled:opacity-60`}>

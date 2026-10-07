@@ -5,8 +5,8 @@ import { Eyebrow, btnPrimary, btnWhite } from "./Section";
 
 export default function CTASection({
   eyebrow = "START THE CONVERSATION",
-  title = "Let's bring clarity to your next project.",
-  sub = "Tell us what you're working on and we'll help identify where stronger project management can make the biggest difference.",
+  title = "Let's launch your next campaign.",
+  sub = "Tell us what you sell and who you want to reach — we'll recommend the right team, scripts and Salesforce setup.",
   primaryLabel = "Start a Project",
   primaryTo = "/start-a-project",
   secondaryLabel,
