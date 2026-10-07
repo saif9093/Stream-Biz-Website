@@ -1,0 +1,110 @@
+{
+  "brand_identity": {
+    "name": "Stream Biz",
+    "positioning": "Enterprise PMO & Governance Consultancy (20+ Years Excellence)",
+    "archetype": "Swiss Architectural Precision + High-End Executive Command Center",
+    "primary_color": "#F47426",
+    "secondary_color": "#2C3B7B"
+  },
+  "typography": {
+    "heading_font": "Syne / Plus Jakarta Sans",
+    "body_font": "Inter / DM Sans",
+    "mono_font": "JetBrains Mono",
+    "hierarchy": {
+      "h1_hero": "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08]",
+      "h2_section": "text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.15]",
+      "h3_subtitle": "text-xl sm:text-2xl font-medium tracking-normal leading-snug",
+      "h4_card": "text-lg sm:text-xl font-semibold tracking-normal",
+      "eyebrow": "text-xs font-mono uppercase tracking-[0.25em] text-[#F47426]",
+      "body_base": "text-base sm:text-lg leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-600"
+    }
+  },
+  "colors": {
+    "brand_orange": "#F47426",
+    "brand_orange_dark": "#D9601A",
+    "brand_orange_light": "#FFF1E8",
+    "brand_navy": "#2C3B7B",
+    "brand_navy_deep": "#1E2A5E",
+    "brand_navy_ultra_dark": "#0D1326",
+    "neutral_dark": "#0B0F19",
+    "neutral_slate": "#1E293B",
+    "neutral_light": "#F8FAFC",
+    "accent_emerald": "#10B981",
+    "accent_amber": "#F59E0B",
+    "accent_rose": "#F43F5E",
+    "navy_overlay_gradient": "bg-gradient-to-r from-[#0D1326]/95 via-[#2C3B7B]/80 to-[#0D1326]/70"
+  },
+  "hero_banner_revamp": {
+    "video_footage_guidelines": {
+      "rejected_type": "Residential timber-frame construction, generic stock drone clips",
+      "recommended_video_urls": [
+        "https://assets.mixkit.co/videos/preview/mixkit-business-people-shaking-hands-in-a-modern-office-42861-large.mp4",
+        "https://assets.mixkit.co/videos/preview/mixkit-top-view-of-a-team-working-on-a-table-42864-large.mp4",
+        "https://assets.mixkit.co/videos/preview/mixkit-analysts-working-with-data-charts-on-screens-43525-large.mp4"
+      ],
+      "video_treatment": "Autoplay, muted, continuous seamless loop, subtle 20% scale Ken Burns zoom effect, overlaid with #0D1326 65% opacity navy gradient + subtle noise texture SVG."
+    },
+    "slider_structure": {
+      "slides_count": 4,
+      "slide_1": "Video hero (Command Center & Strategic Delivery)",
+      "slide_2": "Portfolio Governance & Capital Optimization",
+      "slide_3": "Agile PMO Modernization & Digital Transformation",
+      "slide_4": "Enterprise Risk Mitigation & Mission-Critical Turnaround",
+      "overlay_treatment": "High contrast navy blue gradient backdrop-blur-sm overlay ensuring text contrast ratio > 7:1",
+      "bottom_tab_strip": "Interactive progress indicators for each slide with animated progress bars (framer-motion width 0-100%)",
+      "glass_stat_cards": "Dark mode glassmorphism (`backdrop-blur-md bg-white/10 border border-white/20 shadow-2xl`)"
+    }
+  },
+  "visual_enhancers": {
+    "brand_signature_motifs": [
+      "Precision Baseline & Timeline Rules (1px hairline borders with tick mark accents)",
+      "Status Indicator Dots (RAG status: Emerald green, Amber warning, Rose critical)",
+      "Gantt & Milestone visual accents in background grids",
+      "Numbered Editorial Index badges (01, 02, 03... in Mono font with orange accent)"
+    ],
+    "surface_tactics": {
+      "hero_sections": "Deep Navy (#0D1326 / #2C3B7B) with grain overlay & glowing orange highlights",
+      "editorial_bands": "Dark high-contrast band with large typography",
+      "card_grids": "Subtle border with hover glow (tracing beam effect on high priority cards)",
+      "glassmorphism": "backdrop-blur-xl bg-[#2C3B7B]/20 border border-white/10"
+    }
+  },
+  "homepage_sections_redesign": {
+    "1_hero": "Full-width Slider with Ken Burns effect, video background, glass stat cards, orange CTA",
+    "2_trust_ticker": "Seamless fast marquee of fortune 500 client logos & governance stats",
+    "3_editorial_manifesto": "Dark navy section with high-impact typography: 'Delivering $4.2B+ in Mega-Projects Without Slippage.'",
+    "4_core_capabilities_bento": "Asymmetric Bento grid displaying the 6 Core PMO Services with interactive preview tabs",
+    "5_delivery_control_dashboard": "Interactive simulated executive PMO command center showing real-time milestone tracking",
+    "6_industry_solutions": "Horizontal carousel or accordion with rich imagery for Infrastructure, Healthcare, Tech, Defense",
+    "7_case_studies_spotlight": "Featured case study cards with metrics (+34% ROI, -18mo Delivery Time)",
+    "8_health_check_teaser": "Interactive 3-step interactive assessment widget leading to full Health Check page",
+    "9_cta_footer_banner": "High urgency dark-to-orange gradient banner with 'Schedule Executive Consultation'"
+  },
+  "interior_page_templates": {
+    "page_hero_standard": "Navy background (#0D1326), breadcrumb navigation, category tag, headline with gradient text, summary text, floating stat cards",
+    "services_detail": "Sticky sidebar navigation (Overview, Methodology, Deliverables, ROI, Case Studies), split-screen visual grid",
+    "industry_detail": "Deep dive into sector compliance, regulatory governance, high-res architectural skyscraper photography",
+    "case_study_detail": "Metric-first layout: Key Results Grid (3 big numbers), Challenge, Solution, Architectural Diagram, Client Quote block",
+    "health_check_questionnaire": "Multi-step interactive wizard with smooth step transitions, real-time score calculator, radar chart report generation, lead capture form modal"
+  },
+  "motion_system": {
+    "library": "framer-motion (motion/react) + Lenis smooth scroll",
+    "stagger_children": 0.08,
+    "hover_microinteractions": "scale-105 transition-transform duration-300 ease-out, shadow glow on buttons",
+    "scroll_reveal": "opacity: 0, y: 24 to opacity: 1, y: 0 with 0.6s ease-out",
+    "reduced_motion": "Wrap animations in checks for `prefers-reduced-motion`"
+  },
+  "image_urls": {
+    "corporate_skyscraper_1": "https://images.unsplash.com/photo-1690944851207-3f288c8fcd0b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHw0fHxjb3Jwb3JhdGUlMjBza3lzY3JhcGVyJTIwZ2xhc3MlMjBmYWNhZGUlMjBhcmNoaXRlY3R1cmFsJTIwZGV0YWlsfGVufDB8fHx8MTc5MTI0NzEwNnww&ixlib=rb-4.1.0&q=85",
+    "corporate_skyscraper_2": "https://images.unsplash.com/photo-1617761141732-d481912af1a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBza3lzY3JhcGVyJTIwZ2xhc3MlMjBmYWNhZGUlMjBhcmNoaXRlY3R1cmFsJTIwZGV0YWlsfGVufDB8fHx8MTc5MTI0NzEwNnww&ixlib=rb-4.1.0&q=85",
+    "boardroom_meeting_1": "https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHRlYW0lMjBzdHJhdGVneSUyMHNlc3Npb24lMjBib2FyZHJvb20lMjBtZWV0aW5nfGVufDB8fHx8MTc5MTI0NzEwNnww&ixlib=rb-4.1.0&q=85",
+    "data_control_center": "https://images.unsplash.com/photo-1758691736097-7f735ac5f118?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBwcm9qZWN0JTIwbWFuYWdlbWVudCUyMG9mZmljZSUyMHNreXNjcmFwZXIlMjBkYXRhJTIwYm9hcmR8ZW58MHx8fHwxNzkxMjQ3MDk4fDA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Ensure ALL interactive elements (buttons, inputs, links, tabs, health check questions, forms) have clear kebab-case `data-testid` attributes.",
+    "Do NOT use transparent backgrounds for dropdown menus, navigation bars, or overlays. Always provide explicit blur and semi-opaque backgrounds.",
+    "Replace the current hero video source with high-end corporate office & project management control room footage.",
+    "Elevate homepage sections from plain cards to dynamic bento grids and interactive PMO dashboard visualizations.",
+    "Ensure dark theme aesthetic is used for key hero sections, footers, and callouts to showcase Navy Blue (#2C3B7B) and Primary Orange (#F47426)."
+  ]
+}
