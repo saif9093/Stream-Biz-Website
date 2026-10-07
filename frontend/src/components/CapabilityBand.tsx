@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Briefcase, CalendarRange, ClipboardCheck, LineChart, ShieldAlert, Users } from "lucide-react";
+import { ArrowRight, Briefcase, ClipboardCheck, Cloud, GraduationCap, Headset, Users } from "lucide-react";
 import { CountUp, Reveal } from "./Reveal";
 import { Eyebrow, btnGhost } from "./Section";
 import { SERVICES } from "@/data/services";
@@ -9,36 +9,36 @@ import { SUPPORT_STRUCTURES } from "@/data/growth";
 
 // Counts are derived from the site's own data so they can never drift from what the site actually offers.
 const STATS = [
-  { to: SERVICES.length, label: "Specialist project services" },
-  { to: INDUSTRIES.length, label: "Industries we deliver in" },
-  { to: PROCESS_PHASES.length, label: "Phase delivery method" },
-  { to: SUPPORT_STRUCTURES.length, label: "Flexible team structures" },
+  { to: SERVICES.length, label: "Call center services" },
+  { to: INDUSTRIES.length, label: "Industries we call for" },
+  { to: PROCESS_PHASES.length, label: "Step campaign method" },
+  { to: SUPPORT_STRUCTURES.length, label: "Flexible team models" },
 ];
 
 const SPECIALISTS = [
-  { icon: Briefcase, role: "Project Directors" },
-  { icon: Users, role: "Project Managers" },
-  { icon: CalendarRange, role: "Planners & Schedulers" },
-  { icon: LineChart, role: "Cost Controllers" },
-  { icon: ShieldAlert, role: "Risk Managers" },
-  { icon: ClipboardCheck, role: "PMO Analysts" },
+  { icon: Briefcase, role: "Campaign Project Managers" },
+  { icon: Headset, role: "Call Center Agents" },
+  { icon: Users, role: "Team Leaders" },
+  { icon: Cloud, role: "Salesforce Specialists" },
+  { icon: ClipboardCheck, role: "Quality Analysts" },
+  { icon: GraduationCap, role: "Trainers" },
 ];
 
-/** Right-after-hero proof band: what we deliver, in numbers, and the specialists on call. */
+/** Right-after-hero proof band: what we do, in numbers, and the roles behind every campaign. */
 export default function CapabilityBand() {
   return (
     <section className="relative overflow-hidden bg-white py-20 sm:py-24" data-testid="capability-band">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal className="flex flex-col gap-5">
-            <Eyebrow>Your Project Delivery Partner</Eyebrow>
+            <Eyebrow>Your Call Center Partner</Eyebrow>
             <h2 className="font-heading text-3xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-4xl lg:text-[2.75rem]">
-              Critical projects, delivered with <span className="text-brand-orange">control</span> — in every sector.
+              Client campaigns, run as <span className="text-brand-orange">managed projects</span> — in Salesforce.
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-faint md:text-lg">
-              Skip the scramble of building a delivery function from scratch. Stream Biz brings experienced project
-              professionals and a proven control system that plug straight into your organization — from first plan
-              through final handover.
+              Skip the months of hiring and training a calling team. Stream Biz gives you trained agents, a named
+              project manager and a Salesforce setup built for your campaign — from the first script to the weekly
+              results review.
             </p>
             <div>
               <Link to="/services" className={btnGhost}>
@@ -73,7 +73,7 @@ export default function CapabilityBand() {
           <div className="flex flex-col gap-6 rounded-3xl border border-line bg-soft p-6 sm:p-8 lg:flex-row lg:items-center lg:gap-10">
             <div className="shrink-0 lg:w-56">
               <p className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-brand-orange">On demand</p>
-              <p className="mt-1.5 font-heading text-xl font-extrabold leading-tight text-ink">Delivery specialists ready to join your team</p>
+              <p className="mt-1.5 font-heading text-xl font-extrabold leading-tight text-ink">Call center specialists ready to run your campaign</p>
             </div>
             <div className="grid flex-1 grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-6">
               {SPECIALISTS.map(({ icon: Icon, role }) => (

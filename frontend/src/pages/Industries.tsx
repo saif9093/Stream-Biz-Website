@@ -7,20 +7,20 @@ import { INDUSTRIES } from "@/data/industries";
 export default function Industries() {
   usePageMeta(
     "Industries We Serve | Stream Biz",
-    "Project management expertise tailored to construction, real estate, technology, engineering, healthcare, professional services and complex multi-stakeholder programmes."
+    "Call center campaigns tailored to real estate, banking and insurance, telecom, healthcare, e-commerce, technology, education and travel."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Industries"
-        title="Project expertise that adapts to your industry."
-        sub="The discipline of good project management is constant. Its application is not. We tailor structure, controls and governance to the constraints, regulators and delivery rhythms of your sector."
+        title="Call center campaigns tailored to your industry."
+        sub="The way we run campaigns is constant. The scripts, compliance rules, call times and Salesforce setup are tailored to your sector and your customers."
         meta={[
-          { value: "8 sectors", label: "Industries we structure delivery for" },
-          { value: "Sector controls", label: "Controls tuned to your regulators" },
-          { value: "Live interfaces", label: "Delivery around operations, not instead of it" },
-          { value: "One rhythm", label: "A governance cadence teams can sustain" },
+          { value: "8 sectors", label: "Industries we run campaigns for" },
+          { value: "Sector scripts", label: "Language and offers your customers know" },
+          { value: "Compliance", label: "Calling rules and consent for each market" },
+          { value: "Salesforce", label: "Industry-ready fields, stages and reports" },
         ]}
       />
       <section className="bg-white py-20 sm:py-24">
@@ -30,8 +30,8 @@ export default function Industries() {
       </section>
       <CTASection
         eyebrow="Your industry, your constraints"
-        title="Tell us about your project's environment."
-        sub="We'll show you how our delivery approach adapts to the realities of your sector."
+        title="Tell us about your customers."
+        sub="We'll show you how a Stream Biz campaign would work for your sector."
         secondaryLabel="See How We Work"
         secondaryTo="/how-we-work"
       />

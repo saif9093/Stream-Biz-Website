@@ -9,20 +9,20 @@ import { ENGAGEMENT_MODELS } from "@/data/site";
 export default function EngagementModels() {
   usePageMeta(
     "Engagement Models | Stream Biz",
-    "Five ways to work with Stream Biz — advisory, managed project support, PMO support, project recovery and fractional project management. Pricing tailored to scope."
+    "Five ways to work with Stream Biz — pilot campaigns, dedicated agent teams, managed campaigns, Salesforce operations and overflow support."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Engagement Models"
-        title="The right level of involvement for your project."
-        sub="Every project needs something different. These five models cover the range — from senior guidance to full delivery leadership — and each is shaped to your scope, complexity and internal capability."
+        title="The right way to work with us for your campaign."
+        sub="Every client needs something different. These five models cover the range — from a short pilot to a fully managed, multi-campaign program — each shaped to your volumes and goals."
         meta={[
-          { value: "5 models", label: "From advisory through full delivery leadership" },
-          { value: "Scalable", label: "Right-sized to scope and internal capability" },
-          { value: "Flexible terms", label: "Shaped around your project lifecycle" },
-          { value: "One accountable lead", label: "A single point of ownership throughout" },
+          { value: "5 models", label: "From pilot campaigns to full programs" },
+          { value: "Scalable", label: "Add or reduce agents as volumes change" },
+          { value: "Flexible terms", label: "Pilot, monthly or longer-term" },
+          { value: "One accountable lead", label: "A named project manager throughout" },
         ]}
       />
       <section className="bg-white py-20 sm:py-24">
@@ -60,8 +60,8 @@ export default function EngagementModels() {
               <div className="band-dark grain relative flex h-full flex-col items-start justify-center gap-5 overflow-hidden rounded-3xl border border-white/10 p-8">
                 <h2 className="font-heading text-2xl font-extrabold tracking-tight text-white">How pricing works</h2>
                 <p className="text-sm leading-relaxed text-white/70">
-                  Pricing is tailored to project scope, complexity, duration and level of involvement. You'll receive a
-                  clear, fixed proposal before any engagement begins — no day-rate surprises.
+                  Pricing is based on team size, hours, campaign type, languages and Salesforce setup. You'll receive a
+                  clear proposal before any campaign begins — no hidden costs.
                 </p>
                 <Link to="/start-a-project" data-testid="engagement-start" className={btnPrimary}>
                   Start a Project
@@ -77,14 +77,14 @@ export default function EngagementModels() {
           <SectionHeading
             eyebrow="Not sure which model fits?"
             title="That's what the consultation is for."
-            sub="Describe the project and we'll recommend the lightest model that gives it the control it needs."
+            sub="Describe your campaign and we'll recommend the model that fits your volumes and goals."
           />
         </div>
       </section>
       <CTASection
         eyebrow="Ready when you are"
-        title="Let's scope the right engagement."
-        sub="A focused conversation about your project is all it takes to recommend the right model."
+        title="Let's scope the right campaign."
+        sub="A focused conversation about your customers and goals is all it takes to recommend the right model."
       />
     </>
   );

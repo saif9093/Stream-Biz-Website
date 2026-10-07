@@ -31,8 +31,8 @@ function EditorialBand() {
   return (
     <section ref={ref} className="grain relative overflow-hidden bg-navy-abyss" data-testid="editorial-band">
       <motion.img
-        src="/media/band-governance.jpg"
-        alt="Project delivery team in a governance review session"
+        src="/media/industry-telecom.jpg"
+        alt="Busy Stream Biz call center floor with agents on headsets"
         loading="lazy"
         style={{ y }}
         className="absolute inset-0 h-[120%] w-full object-cover"
@@ -52,19 +52,19 @@ function EditorialBand() {
         </Reveal>
         <Reveal delay={0.1}>
           <p className="font-heading text-3xl font-extrabold leading-[1.15] tracking-tight text-white sm:text-4xl lg:text-[3.2rem]">
-            We establish the{" "}
-            <span className="text-brand-orange">structure</span>,{" "}
-            <span className="text-brand-orange">visibility</span> and{" "}
-            <span className="text-brand-orange">accountability</span>{" "}
-            your project needs to move forward with confidence.
+            Every client campaign is run as a project — with{" "}
+            <span className="text-brand-orange">trained agents</span>,{" "}
+            <span className="text-brand-orange">Salesforce</span> and{" "}
+            <span className="text-brand-orange">one accountable manager</span>{" "}
+            behind every call.
           </p>
         </Reveal>
         <Reveal delay={0.2}>
           <div className="flex flex-wrap items-center gap-10 border-t border-white/12 pt-8">
             {[
-              { to: 6, suffix: "", label: "Delivery disciplines in every engagement" },
-              { to: 8, suffix: "", label: "Specialist services, one accountable team" },
-              { to: 1, suffix: "", label: "Source of truth for every stakeholder" },
+              { to: 6, suffix: "", label: "Steps from brief to live campaign" },
+              { to: 8, suffix: "", label: "Call center services, one accountable team" },
+              { to: 1, suffix: "", label: "Salesforce record for every lead, call and case" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-center gap-4">
                 <span className="font-heading text-5xl font-extrabold tracking-tight text-brand-orange">
@@ -82,8 +82,8 @@ function EditorialBand() {
 
 export default function Home() {
   usePageMeta(
-    "Stream Biz | Project Management Services",
-    "Stream Biz helps organizations plan, manage and control critical projects with disciplined project management, practical governance and real-time visibility."
+    "Stream Biz | Call Center Project Management & Salesforce Operations",
+    "Stream Biz is a Dubai call center that runs outbound sales, lead generation, appointment setting and customer support projects for clients — every campaign managed in Salesforce."
   );
 
   return (
@@ -101,9 +101,9 @@ export default function Home() {
       <section className="bg-soft py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
-            eyebrow="The Project Challenge"
-            title="Projects rarely fail because people aren't working hard."
-            sub="They fail when planning, ownership, communication and control break down. These are the four failure patterns we are brought in to fix most often."
+            eyebrow="The Call Center Challenge"
+            title="Outsourced calling rarely fails because agents aren't dialing."
+            sub="It fails when nobody owns the targets, scripts drift, quality goes unchecked and the data lives everywhere except the CRM. These are the four problems we fix most often."
           />
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
             {PROBLEM_CARDS.map((card, i) => {
@@ -178,9 +178,9 @@ export default function Home() {
           <SectionHeading
             dark
             center
-            eyebrow="The Delivery Control System"
-            title="One system that turns project inputs into predictable delivery."
-            sub="Every engagement runs on the same operating core: the complexity your project carries on one side, the clarity leadership needs on the other."
+            eyebrow="The Stream Biz Campaign Engine"
+            title="One system that turns a client brief into measurable results."
+            sub="Every campaign runs on the same operating core: your brief, our people and Salesforce on one side — leads, sales and happy customers on the other."
           />
           <div className="mt-16">
             <DeliveryControlSystem />
@@ -194,8 +194,8 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-8">
             <SectionHeading
               eyebrow="Core Services"
-              title="Project management built around your reality."
-              sub="Eight specialist services that provide the structure and expertise your project needs — at the stage where you need it most."
+              title="Call center projects, managed end to end."
+              sub="Eight services that cover every stage of the customer journey — from finding prospects to supporting and keeping customers — all run in Salesforce."
             />
             <Reveal delay={0.1}>
               <Link to="/services" data-testid="services-view-all" className={btnGhost}>
@@ -213,8 +213,8 @@ export default function Home() {
                 className="group relative flex h-full min-h-[460px] flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-brand-navy p-8 transition-[transform,box-shadow] duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-brand-navy/30"
               >
                 <img
-                  src="/media/service-project-management.jpg"
-                  alt="Project manager leading a delivery review with the project team"
+                  src="/media/svc-campaign-management.jpg"
+                  alt="Stream Biz project manager reviewing a live campaign dashboard with agents"
                   loading="lazy"
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
                 />
@@ -239,7 +239,7 @@ export default function Home() {
                 </div>
                 <div className="relative mt-10 flex flex-col gap-4">
                   <span className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-brand-orange">
-                    Lead discipline
+                    Our core service
                   </span>
                   <h3 className="font-heading text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">
                     {SERVICES[0].title}
@@ -263,7 +263,7 @@ export default function Home() {
                 className="group flex h-full flex-col justify-between gap-6 rounded-2xl border border-dashed border-line bg-soft p-7 transition-[border-color,background-color] duration-300 hover:border-brand-orange/60 hover:bg-white"
               >
                 <span className="font-mono text-[10px] font-bold uppercase tracking-[0.24em] text-brand-orange">
-                  All disciplines
+                  All services
                 </span>
                 <div className="flex flex-col gap-3">
                   <h3 className="font-heading text-xl font-extrabold leading-tight tracking-tight text-ink">
@@ -289,17 +289,17 @@ export default function Home() {
           <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="flex flex-col gap-6">
               <SectionHeading
-                eyebrow="Project Visibility"
-                title="See every project the way leadership needs to."
-                sub="This is what delivery looks like when it's properly controlled: one honest view of progress, cost, risk and milestones — updated from real project data, not assembled for the meeting."
+                eyebrow="Live Campaign Visibility"
+                title="See every campaign the way our clients do."
+                sub="Every client gets a live Salesforce dashboard: calls, contacts, leads, meetings, sales and quality — updated from real call data, not assembled for the meeting."
               />
               <Reveal delay={0.15}>
                 <ul className="flex flex-col gap-3.5">
                   {[
-                    "RAG status leadership can trust",
-                    "Progress measured against baseline, not opinion",
-                    "Risks and issues visible before they land",
-                    "Milestones tracked to the week",
+                    "Daily calls, contacts and conversions",
+                    "Leads and meetings traced to their source",
+                    "QA scores alongside results",
+                    "Launch milestones tracked to the day",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm font-semibold text-body">
                       <span className="h-2 w-2 shrink-0 rotate-45 bg-brand-orange" aria-hidden="true" />
@@ -309,8 +309,8 @@ export default function Home() {
                 </ul>
               </Reveal>
               <Reveal delay={0.2}>
-                <Link to="/services/project-controls-reporting" data-testid="dashboard-cta" className={btnPrimary}>
-                  Explore Project Controls
+                <Link to="/services/salesforce-crm" data-testid="dashboard-cta" className={btnPrimary}>
+                  Explore Salesforce Operations
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Reveal>
@@ -332,8 +332,8 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-8">
             <SectionHeading
               eyebrow="Industries"
-              title="Project expertise that adapts to your industry."
-              sub="The discipline is constant; the application is tailored to the constraints, regulators and rhythms of your sector."
+              title="Campaigns tailored to your industry."
+              sub="The process is constant; the scripts, compliance rules and call rhythms are tailored to your sector."
             />
             <Reveal delay={0.1}>
               <Link to="/industries" data-testid="industries-view-all" className={btnGhost}>
@@ -359,13 +359,13 @@ export default function Home() {
             <div className="flex flex-col gap-6">
               <SectionHeading
                 dark
-                eyebrow="Project Health Check"
-                title="Is your project on track — or just reporting that it is?"
-                sub="Answer ten focused questions and get an instant, visual read on your project's planning, schedule, budget, risk and governance health."
+                eyebrow="Call Center Health Check"
+                title="Is your calling operation performing — or just busy?"
+                sub="Answer ten focused questions and get an instant, visual read on your planning, team, CRM, quality and reporting."
               />
               <Reveal delay={0.15}>
                 <Link to="/project-health-check" data-testid="health-check-cta" className={btnPrimary}>
-                  Take the Project Health Check
+                  Take the Health Check
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Reveal>
@@ -373,7 +373,7 @@ export default function Home() {
             <Reveal delay={0.1}>
               <div className="rounded-3xl border border-white/12 bg-white/[0.06] p-8 shadow-2xl shadow-black/30 backdrop-blur-xl">
                 <div className="flex items-end justify-between">
-                  <p className="font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-white/50">Project Health</p>
+                  <p className="font-mono text-[11px] font-bold uppercase tracking-[0.18em] text-white/50">Call Center Health</p>
                   <p className="font-heading text-4xl font-extrabold text-white">
                     <CountUp to={78} />
                     <span className="text-lg text-white/40"> / 100</span>
@@ -382,10 +382,10 @@ export default function Home() {
                 <div className="mt-6 flex flex-col gap-3.5">
                   {[
                     { label: "Planning", v: 84 },
-                    { label: "Schedule", v: 72 },
-                    { label: "Budget", v: 80 },
-                    { label: "Risk", v: 56 },
-                    { label: "Governance", v: 90 },
+                    { label: "Team", v: 72 },
+                    { label: "CRM", v: 56 },
+                    { label: "Quality", v: 80 },
+                    { label: "Reporting", v: 90 },
                   ].map((bar, i) => (
                     <div key={bar.label} className="flex items-center gap-4">
                       <span className="w-24 text-xs font-bold text-white/70">{bar.label}</span>
@@ -403,7 +403,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="mt-6 rounded-xl border border-brand-orange/30 bg-brand-orange/12 px-4 py-3 text-xs font-semibold leading-relaxed text-brand-orange">
-                  Example result: strong planning, but risk visibility needs strengthening.
+                  Example result: strong reporting, but Salesforce data needs cleaning up.
                 </p>
               </div>
             </Reveal>
@@ -411,7 +411,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FREE PROJECT SNAPSHOT ────────────────────────── */}
+      {/* ── FREE CAMPAIGN SNAPSHOT ────────────────────────── */}
       <ProjectSnapshot />
 
       {/* ── INSIGHTS ─────────────────────────────────────── */}
@@ -420,8 +420,8 @@ export default function Home() {
           <div className="flex flex-wrap items-end justify-between gap-8">
             <SectionHeading
               eyebrow="Insights & Resources"
-              title="Field notes from the delivery front line."
-              sub="Practical thinking on project management, controls and governance — written by people who run projects, not comment on them."
+              title="Field notes from the call center floor."
+              sub="Practical thinking on campaigns, call quality and Salesforce — written by people who run call center projects every day."
             />
             <Reveal delay={0.1}>
               <Link to="/insights" data-testid="insights-view-all" className={btnGhost}>
@@ -460,10 +460,10 @@ export default function Home() {
                   <Calculator className="h-5 w-5" />
                 </span>
                 <h3 className="relative font-heading text-2xl font-extrabold leading-tight text-white">
-                  What is a late project costing you?
+                  What are missed calls costing you?
                 </h3>
                 <p className="relative text-sm leading-relaxed text-white/70">
-                  Use our Cost of Delay Calculator to estimate your exposure from slippage, overruns and delayed benefits.
+                  Use our Missed Revenue Calculator to estimate what unanswered calls, slow follow-ups and missed leads cost each month.
                 </p>
                 <span className="relative inline-flex items-center gap-2 text-sm font-bold text-white transition-colors group-hover:text-brand-orange">
                   Open the calculator
@@ -488,8 +488,8 @@ export default function Home() {
           <div className="flex flex-col gap-10">
             <SectionHeading
               eyebrow="Contact Us"
-              title="Let's bring clarity to your next project."
-              sub="Tell us what you're working on. A senior project professional will read it and get back to you."
+              title="Let's launch your next campaign."
+              sub="Tell us what you sell and who you want to reach. A senior member of our operations team will read it and get back to you."
               className="max-w-none"
             />
             <div className="flex flex-col gap-5">

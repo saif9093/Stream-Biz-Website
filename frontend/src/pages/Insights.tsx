@@ -12,7 +12,7 @@ import { RESOURCES } from "@/data/site";
 export default function Insights() {
   usePageMeta(
     "Insights & Resources | Stream Biz",
-    "Practical thinking on project management, PMO, project controls, planning, risk and delivery — plus downloadable templates and checklists."
+    "Practical thinking on call center campaigns, call quality, lead generation and Salesforce — plus templates and checklists."
   );
   const [category, setCategory] = useState("All");
   const filtered =
@@ -22,8 +22,8 @@ export default function Insights() {
     <>
       <PageHero
         eyebrow="Insights & Resources"
-        title="Field notes from the delivery front line."
-        sub="Practical thinking on project management, controls and governance — written by people who run projects, not comment on them."
+        title="Field notes from the call center floor."
+        sub="Practical thinking on campaigns, call quality and Salesforce — written by people who run call center projects every day."
       />
 
       <section className="bg-white py-16 sm:py-20">
@@ -96,7 +96,7 @@ export default function Insights() {
           <SectionHeading
             eyebrow="Templates & Downloads"
             title="Working tools, free to use."
-            sub="The checklists and templates we reach for on real engagements. Request any resource and we'll send it over."
+            sub="The checklists and templates we use on real campaigns. Request any resource and we'll send it over."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {RESOURCES.map((resource, i) => (
@@ -127,9 +127,9 @@ export default function Insights() {
 
       <CTASection
         eyebrow="Beyond the reading"
-        title="See how this thinking applies to your project."
-        sub="Insights are useful. Structure applied to your specific delivery is better."
-        secondaryLabel="Take the Project Health Check"
+        title="See how this thinking applies to your campaign."
+        sub="Insights are useful. A campaign built for your customers is better."
+        secondaryLabel="Take the Health Check"
         secondaryTo="/project-health-check"
       />
     </>

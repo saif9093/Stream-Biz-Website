@@ -8,15 +8,15 @@ import { Eyebrow, btnPrimary } from "./Section";
 import { PROJECT_TYPES, STAGES, SIZES } from "@/lib/formOptions";
 
 const CONCERNS = [
-  "Dates keep slipping",
-  "No clear view of cost",
-  "Risks surface too late",
-  "Stakeholders not aligned",
+  "Not enough qualified leads",
+  "Low contact or conversion rates",
+  "Inconsistent call quality",
+  "Messy Salesforce data",
   "Reporting nobody trusts",
-  "Project needs recovery",
+  "Hard to hire and train agents",
 ];
 
-const STEPS = ["Your project", "Biggest concern", "Your details"];
+const STEPS = ["Your campaign", "Biggest concern", "Your details"];
 
 const darkInput =
   "w-full rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3.5 text-sm text-white placeholder:text-white/35 transition-[border-color,background-color] focus:border-brand-orange focus:bg-white/10 focus:outline-none";
@@ -40,7 +40,7 @@ function Choice({ label, active, onClick, testid }: { label: string; active: boo
   );
 }
 
-/** Free Project Snapshot — a 3-step lead magnet. Submits to /api/leads with source "project-snapshot". */
+/** Free Campaign Snapshot — a 3-step lead magnet. Submits to /api/leads with source "project-snapshot". */
 export default function ProjectSnapshot() {
   const [step, setStep] = useState(0);
   const [project, setProject] = useState({ projectType: "", projectStage: "", projectSize: "" });
@@ -77,16 +77,16 @@ export default function ProjectSnapshot() {
       <div className="pointer-events-none absolute -left-24 bottom-0 h-96 w-96 rounded-full bg-brand-orange/20 blur-3xl" aria-hidden="true" />
       <div className="relative mx-auto grid max-w-7xl items-start gap-14 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
         <Reveal className="flex flex-col gap-6 lg:sticky lg:top-32">
-          <Eyebrow dark>Free Project Snapshot</Eyebrow>
+          <Eyebrow dark>Free Campaign Snapshot</Eyebrow>
           <h2 className="font-heading text-3xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
-            Get an expert view of your project — <span className="text-brand-orange">free.</span>
+            Get an expert view of your calling campaign — <span className="text-brand-orange">free.</span>
           </h2>
           <p className="max-w-lg text-base leading-relaxed text-white/70 md:text-lg">
-            Answer three quick questions. A senior project professional reviews your situation and comes back with a short,
-            practical snapshot: where control is weakest and what to fix first.
+            Answer three quick questions. A senior call center manager reviews your situation and comes back with a short,
+            practical snapshot: what to fix first in your scripts, team, Salesforce setup or reporting.
           </p>
           <ul className="flex flex-col gap-3">
-            {["Reviewed by a senior project professional", "Practical priorities, not a sales pitch", "No obligation — yours to keep"].map((t) => (
+            {["Reviewed by a senior call center manager", "Practical priorities, not a sales pitch", "No obligation — yours to keep"].map((t) => (
               <li key={t} className="flex items-center gap-3 text-sm font-semibold text-white/80">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-brand-orange" />
                 {t}
@@ -133,7 +133,7 @@ export default function ProjectSnapshot() {
                       {step === 0 && (
                         <>
                           <div className="flex flex-col gap-3">
-                            <span className={darkLabel}>What kind of project is it? *</span>
+                            <span className={darkLabel}>What kind of campaign is it? *</span>
                             <div className="grid gap-2 sm:grid-cols-2">
                               {PROJECT_TYPES.map((t) => (
                                 <Choice key={t} label={t} testid={`snapshot-type-${t}`} active={project.projectType === t} onClick={() => setProject((p) => ({ ...p, projectType: t }))} />
@@ -142,14 +142,14 @@ export default function ProjectSnapshot() {
                           </div>
                           <div className="grid gap-4 sm:grid-cols-2">
                             <label className="flex flex-col gap-1.5">
-                              <span className={darkLabel}>Current stage *</span>
+                              <span className={darkLabel}>Where are you today? *</span>
                               <select data-testid="snapshot-stage" value={project.projectStage} onChange={(e) => setProject((p) => ({ ...p, projectStage: e.target.value }))} className={darkInput}>
                                 <option value="" className="text-ink">Select stage</option>
                                 {STAGES.map((s) => <option key={s} value={s} className="text-ink">{s}</option>)}
                               </select>
                             </label>
                             <label className="flex flex-col gap-1.5">
-                              <span className={darkLabel}>Approximate size</span>
+                              <span className={darkLabel}>Approximate team size</span>
                               <select data-testid="snapshot-size" value={project.projectSize} onChange={(e) => setProject((p) => ({ ...p, projectSize: e.target.value }))} className={darkInput}>
                                 <option value="" className="text-ink">Select size</option>
                                 {SIZES.map((s) => <option key={s} value={s} className="text-ink">{s}</option>)}
@@ -200,7 +200,7 @@ export default function ProjectSnapshot() {
                               data-testid="snapshot-message"
                               value={contact.message}
                               onChange={(e) => setContact((c) => ({ ...c, message: e.target.value }))}
-                              placeholder="A sentence or two about the project and what's going on."
+                              placeholder="A sentence or two about your campaign and what's going on."
                               className={darkInput}
                             />
                           </label>

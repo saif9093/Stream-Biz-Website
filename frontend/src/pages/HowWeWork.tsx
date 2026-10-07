@@ -9,8 +9,8 @@ import { PROCESS_PHASES, OPERATING_MODEL } from "@/data/site";
 
 export default function HowWeWork() {
   usePageMeta(
-    "How We Work | Stream Biz Delivery Methodology",
-    "A structured six-phase delivery approach — discover, define, plan, execute, control, close — with clear gates and project controls at every stage."
+    "How We Work | Stream Biz Campaign Method",
+    "A six-step campaign method — discover, design, build, launch, manage, optimize — with Salesforce reporting and quality checks at every step."
   );
   const [active, setActive] = useState(0);
   const phase = PROCESS_PHASES[active];
@@ -19,13 +19,13 @@ export default function HowWeWork() {
     <>
       <PageHero
         eyebrow="How We Work"
-        title="A structured approach from kickoff to completion."
-        sub="Six phases, each with a clear objective, defined outputs and the controls that keep delivery honest. Explore each phase below."
+        title="A structured path from brief to live campaign."
+        sub="Six steps, each with a clear objective, defined outputs and a sign-off before the next begins. Explore each step below."
         meta={[
-          { value: "6 phases", label: "From mobilisation through closeout" },
-          { value: "Defined gates", label: "Each phase has an exit condition" },
-          { value: "Named outputs", label: "Artifacts your team keeps afterwards" },
-          { value: "Weekly cadence", label: "Reporting rhythm leadership can rely on" },
+          { value: "6 steps", label: "From discovery call to optimization" },
+          { value: "Clear sign-offs", label: "Scripts and CRM approved before launch" },
+          { value: "Pilot first", label: "A controlled ramp-up, not a big bang" },
+          { value: "Weekly review", label: "Results and quality with your team" },
         ]}
       />
 
@@ -34,7 +34,7 @@ export default function HowWeWork() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* Phase selector */}
           <Reveal>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" role="tablist" aria-label="Project lifecycle phases">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6" role="tablist" aria-label="Campaign steps">
               {PROCESS_PHASES.map((p, i) => (
                 <button
                   key={p.num}
@@ -73,14 +73,14 @@ export default function HowWeWork() {
                 <div className="mt-2 flex items-start gap-3 rounded-xl bg-white p-4">
                   <Users className="mt-0.5 h-4 w-4 shrink-0 text-brand-navy" />
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Stakeholder involvement</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Who's involved</p>
                     <p className="mt-1 text-sm font-semibold text-body">{phase.stakeholders}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 rounded-xl bg-white p-4">
                   <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-brand-navy" />
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Key project controls</p>
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-faint">Sign-off</p>
                     <p className="mt-1 text-sm font-semibold text-body">{phase.controls}</p>
                   </div>
                 </div>
@@ -114,9 +114,9 @@ export default function HowWeWork() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <SectionHeading
             dark
-            eyebrow="The Project Operating Model"
-            title="How strategy becomes delivery — visibly."
-            sub="Every Stream Biz engagement installs this chain: each link feeds the next, and nothing moves forward in the dark."
+            eyebrow="The Campaign Operating Model"
+            title="How a client brief becomes results — visibly."
+            sub="Every Stream Biz campaign runs on this chain: each link feeds the next, and everything is recorded in Salesforce."
           />
           <div className="mt-16 flex flex-col items-center">
             {OPERATING_MODEL.map((item, i) => (
@@ -141,9 +141,9 @@ export default function HowWeWork() {
 
       <CTASection
         eyebrow="See it applied"
-        title="Watch this methodology run on your project."
-        sub="Start with a health check or a consultation — either way, you'll see the structure within the first conversation."
-        secondaryLabel="Take the Project Health Check"
+        title="See this method run on your campaign."
+        sub="Start with a health check or a call — either way, you'll see how we'd set up your campaign in the first conversation."
+        secondaryLabel="Take the Health Check"
         secondaryTo="/project-health-check"
       />
     </>

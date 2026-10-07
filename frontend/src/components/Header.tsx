@@ -13,12 +13,12 @@ interface DropItem {
 }
 
 const RESOURCE_LINKS: DropItem[] = [
-  { to: "/insights", title: "Insights & Articles", short: "Field notes and practical guidance on project delivery." },
-  { to: "/project-health-check", title: "Project Health Check", short: "Score your project in ten questions and get tailored advice." },
-  { to: "/cost-of-delay-calculator", title: "Cost of Delay Calculator", short: "Estimate what slippage and overruns could cost you." },
-  { to: "/engagement-models", title: "Engagement Models", short: "Five ways to work with us, from advisory to recovery." },
+  { to: "/insights", title: "Insights & Articles", short: "Practical guidance on campaigns, call quality and Salesforce." },
+  { to: "/project-health-check", title: "Call Center Health Check", short: "Score your calling operation in ten questions." },
+  { to: "/cost-of-delay-calculator", title: "Missed Revenue Calculator", short: "Estimate what missed leads and lost customers cost you." },
+  { to: "/engagement-models", title: "Engagement Models", short: "Five ways to work with us, from pilots to full programs." },
   { to: "/faq", title: "FAQ", short: "Straight answers to the questions we hear most." },
-  { to: "/careers", title: "Careers", short: "Build your project delivery career with Stream Biz." },
+  { to: "/careers", title: "Careers", short: "Call center, sales, QA and Salesforce jobs in Dubai." },
 ];
 
 function NavDropdown({
@@ -117,8 +117,8 @@ export default function Header() {
           <Link
             to="/project-health-check"
             data-testid="nav-health-check"
-            aria-label="Project Health Check"
-            title="Project Health Check"
+            aria-label="Call Center Health Check"
+            title="Call Center Health Check"
             className={`flex h-11 items-center gap-2 whitespace-nowrap rounded-full border px-3.5 text-sm font-semibold transition-colors hover:border-brand-orange hover:text-brand-orange 2xl:px-5 ${
               onDark ? "border-white/25 bg-white/5 text-white backdrop-blur-md" : "border-line text-brand-navy"
             }`}

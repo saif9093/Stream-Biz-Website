@@ -8,31 +8,31 @@ import FaqAccordion from "@/components/FaqAccordion";
 import { getIcon } from "@/lib/icons";
 import { PRICING_FACTORS, SERVICE_TIERS, TIER_MATRIX } from "@/data/growth";
 
-// No figures are published on purpose — every engagement is scoped and quoted individually.
+// No figures are published on purpose — every campaign is scoped and quoted individually.
 const PRICING_FAQS = [
-  { q: "Why don't you publish fixed prices?", a: "No two projects carry the same scale, risk or governance needs. We scope every engagement against your actual situation so you pay for the support the project needs — no more, no less." },
-  { q: "How quickly can I get a proposal?", a: "After a short consultation we send a written proposal with scope, team, approach and fees." },
-  { q: "Can we start small and scale up?", a: "Yes. Many clients begin with Tier 1 or a fractional lead, then extend to dedicated or programme-level support as the project grows." },
-  { q: "Do you work on fixed-fee or time-based arrangements?", a: "Both. Defined pieces of work such as health checks or PMO set-up can be fixed-fee; ongoing delivery support is usually agreed as a monthly or day-rate arrangement." },
+  { q: "Why don't you publish fixed prices?", a: "No two campaigns need the same team size, hours, languages or Salesforce setup. We scope every campaign against your real volumes so you pay for what you need — no more, no less." },
+  { q: "How quickly can I get a proposal?", a: "After a short call we send a written proposal with team, scripts, launch plan, reporting and fees." },
+  { q: "Can we start small and scale up?", a: "Yes. Many clients begin with a pilot or a shared team, then move to a dedicated team or a multi-campaign program as results come in." },
+  { q: "How are campaigns billed?", a: "Usually per agent per month or per hour worked. Setup work such as Salesforce configuration can be quoted as a fixed fee. Performance-linked options can be discussed." },
 ];
 
 export default function Pricing() {
   usePageMeta(
     "Pricing & Service Tiers | Stream Biz",
-    "Compare Stream Biz service tiers and team structures, see what shapes the cost of project management support, and request a tailored proposal."
+    "Compare Stream Biz service tiers and team models, see what shapes the cost of a managed call center campaign, and request a tailored proposal."
   );
 
   return (
     <>
       <PageHero
         eyebrow="Pricing"
-        title="Support scoped to your project — not a price list."
-        sub="Choose a team structure and service tier, compare what each includes, and request a proposal built around your project's real scale and risk."
+        title="Pricing built around your campaign — not a price list."
+        sub="Choose a team model and service tier, compare what each includes, and request a proposal built around your real call volumes and goals."
         meta={[
-          { value: "3 tiers", label: "Visibility, Control, Assurance" },
-          { value: "3 structures", label: "Fractional, dedicated, programme" },
-          { value: "Flexible", label: "Scale support up or down by phase" },
-          { value: "Clear", label: "Written scope and fees before we start" },
+          { value: "3 tiers", label: "Launch, Managed, Growth" },
+          { value: "3 team models", label: "Shared, dedicated, multi-campaign" },
+          { value: "Flexible", label: "Scale agents up or down with demand" },
+          { value: "Clear", label: "Written scope and fees before launch" },
         ]}
       />
 
@@ -106,7 +106,7 @@ export default function Pricing() {
             <SectionHeading
               eyebrow="Request Pricing"
               title="Get a tailored proposal."
-              sub="Tell us about the project and the support you're considering. We'll come back with scope, team and fees."
+              sub="Tell us about your campaign and the support you're considering. We'll come back with team, launch plan and fees."
               className="max-w-none"
             />
             <Reveal>

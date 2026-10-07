@@ -36,10 +36,10 @@ export default function ProcessTimeline() {
           <Reveal className="flex max-w-2xl flex-col gap-5">
             <Eyebrow dark>How We Work</Eyebrow>
             <h2 className="font-heading text-3xl font-extrabold leading-[1.08] tracking-tight text-white sm:text-4xl lg:text-[2.75rem]">
-              A structured approach from kickoff to <span className="text-brand-orange">completion.</span>
+              A structured path from brief to <span className="text-brand-orange">live campaign.</span>
             </h2>
             <p className="text-base leading-relaxed text-white/65 md:text-lg">
-              Six phases, clear gates, and controls that keep every stage honest.
+              Six steps, clear sign-offs and daily management that keep every campaign on target.
             </p>
           </Reveal>
           <Reveal delay={0.1}>
@@ -60,7 +60,7 @@ export default function ProcessTimeline() {
                 transition={{ duration: 0.7, ease: EASE }}
               />
             </div>
-            <div className="grid grid-cols-3 gap-y-8 md:grid-cols-6" role="tablist" aria-label="Delivery phases">
+            <div className="grid grid-cols-3 gap-y-8 md:grid-cols-6" role="tablist" aria-label="Campaign steps">
               {PROCESS_PHASES.map((p, i) => {
                 const on = i === active;
                 const done = i < active;
@@ -108,14 +108,14 @@ export default function ProcessTimeline() {
             >
               <div className="flex flex-col gap-4">
                 <span className="font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-brand-orange">
-                  Phase {phase.num} of 0{PROCESS_PHASES.length}
+                  Step {phase.num} of 0{PROCESS_PHASES.length}
                 </span>
                 <h3 className="font-heading text-4xl font-extrabold tracking-tight text-white">{title(phase.name)}</h3>
                 <p className="text-base leading-relaxed text-white/75">{phase.objective}</p>
                 <div className="mt-auto flex items-start gap-3 rounded-2xl border border-brand-orange/30 bg-brand-orange/10 p-4">
                   <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange" />
                   <div>
-                    <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-orange">Control gate</p>
+                    <p className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-brand-orange">Sign-off</p>
                     <p className="mt-1 text-sm font-semibold text-white/85">{phase.controls}</p>
                   </div>
                 </div>

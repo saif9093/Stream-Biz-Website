@@ -11,268 +11,182 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
-    slug: "project-controls-executive-table",
-    category: "Project Controls",
-    title: "Why project controls belong at the executive table",
-    excerpt: "Controls are too often treated as back-office administration. In reality they are the executive's earliest warning system — if they are designed to answer the right questions.",
+    slug: "run-every-campaign-as-a-project",
+    category: "Campaign Management",
+    title: "Why every call center campaign should be run as a project",
+    excerpt: "Most outsourced campaigns are run as a block of seats. The ones that perform are run as projects — with an owner, a plan, sign-offs and a weekly review.",
     date: "18 Jun 2026",
     readTime: "6 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "Controls are a leadership tool, not an admin function",
+        h: "Seats are not a strategy",
         p: [
-          "Ask a project team what controls are for and you will usually hear about reporting. Ask a sponsor what they need and you will hear something different: confidence. Confidence that the date is real, that the money is understood, and that problems will surface while there is still time to act.",
-          "The gap between those two answers is where most project controls fail. They are built to record the project rather than to steer it.",
+          "Ask many call centers what a client is buying and the answer is agent hours. Ask the client and the answer is different: qualified leads, booked meetings, sales, happy customers. The gap between those two answers is where campaigns quietly fail.",
+          "When a campaign is treated as a block of seats, nobody owns the result. Scripts drift, lists go stale and the client only learns what happened when the monthly invoice arrives.",
         ],
       },
       {
-        h: "The questions that matter",
+        h: "What changes when it's a project",
         p: [
-          "Good controls answer four questions at any moment: Where are we against the baseline? Where will we finish? What could stop us? And what decisions do we need from leadership this month?",
-          "If your reporting pack cannot answer all four in the first two pages, the controls are measuring activity, not delivery.",
+          "A project has a named owner, an agreed goal and a plan to reach it. For a calling campaign that means a project manager who owns the targets, a launch checklist, approved scripts, a trained team and a Salesforce workspace built for the work.",
+          "It also means sign-offs. Scripts and CRM setup are approved before launch, a pilot group goes live first, and changes go through a simple change process so agents and Salesforce are updated together.",
         ],
       },
       {
-        h: "Designing controls that get used",
+        h: "The weekly review is the heartbeat",
         p: [
-          "Start with the decisions, not the data. Identify the forums where project decisions are actually made, then build the minimum measurement and reporting needed to make those decisions well.",
-          "Everything beyond that minimum is cost without benefit — and it is usually the first thing the delivery team stops maintaining.",
+          "The single most useful habit is a short weekly review with the client: calls, contacts, conversions, quality scores and what we'll change next week. It keeps everyone honest and turns data into decisions.",
         ],
       },
     ],
   },
   {
-    slug: "five-schedules-every-project-needs",
-    category: "Planning",
-    title: "The five schedules every project actually needs",
-    excerpt: "One Gantt chart cannot serve the board, the delivery team and the contractor at once. Mature projects maintain a small family of schedules — each built for a specific audience.",
+    slug: "salesforce-setup-for-calling-campaigns",
+    category: "Salesforce",
+    title: "The Salesforce setup every calling campaign needs",
+    excerpt: "You don't need a complex org to run a great campaign. You need the right objects, a handful of clean fields, sensible stages and dashboards people actually open.",
     date: "02 Jun 2026",
     readTime: "7 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "One schedule, many audiences",
+        h: "Start from the call, not the CRM",
         p: [
-          "The executive who needs three milestone dates and the engineer sequencing next month's work are looking at the same project — but they should never be looking at the same schedule. Forcing one document to serve both produces something useful to neither.",
+          "Before touching Salesforce, map what happens on a call: who is called, what can happen, what the agent records and where the record goes next. That call flow becomes your lead stages, dispositions and follow-up rules.",
+          "Most messy orgs are messy because they were configured before anyone agreed how the work actually runs.",
         ],
       },
       {
-        h: "The working set",
+        h: "The essentials",
         p: [
-          "Most well-run projects maintain five views of time: a one-page milestone summary for leadership; a logic-linked master schedule as the single source of truth; a rolling lookahead for the delivery team; interface schedules for third parties; and a change-controlled baseline that never moves without a decision.",
-          "Each is derived from the master schedule, so there is never a debate about which version is right.",
+          "Leads or contacts with clean, de-duplicated data. A small set of call dispositions every agent uses the same way. Tasks for callbacks with due dates. Opportunities or cases for anything that moves forward. And activity logging that happens automatically wherever the dialer allows it.",
+          "Add fields only when someone will report on them. Every unused field is another place for inconsistent data to hide.",
         ],
       },
       {
-        h: "Keeping the family consistent",
+        h: "Dashboards that earn their place",
         p: [
-          "The discipline that makes this work is derivation, not duplication. Every view is generated from the same underlying logic, updated on one cadence, by one accountable planner.",
+          "One dashboard for agents (today's activity against target), one for team leaders (team performance and quality), and one for the client (results and trends). If a chart doesn't change a decision, remove it.",
         ],
       },
     ],
   },
   {
-    slug: "pmo-or-project-office",
-    category: "PMO",
-    title: "PMO or project office? Choosing the right governance model",
-    excerpt: "The letters PMO cover everything from a report-collation desk to a delivery powerhouse. The model matters less than the mandate.",
+    slug: "qa-scorecards-that-improve-calls",
+    category: "Quality Assurance",
+    title: "QA scorecards that actually improve calls",
+    excerpt: "Most quality scorecards measure whether the script was read. The useful ones measure whether the customer was helped — and turn every score into coaching.",
     date: "21 May 2026",
     readTime: "5 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "Start with the mandate",
+        h: "Measure outcomes, not just compliance",
         p: [
-          "Before choosing tools or templates, decide what the PMO is for. Supporting PMOs provide standards and consolidate reporting. Controlling PMOs enforce compliance and run assurance. Directing PMOs take over delivery of the projects themselves.",
-          "Most organizations need a blend — but one mode must be primary, or the PMO becomes everything to everyone and useful to no one.",
+          "A good scorecard has a few non-negotiables — required disclosures, consent, correct data capture — and then focuses on what makes calls work: clear openings, good questions, listening, handling objections and agreeing a next step.",
         ],
       },
       {
-        h: "Right-sizing the structure",
+        h: "Sample with a plan",
         p: [
-          "A PMO should be the smallest structure that gives leadership reliable visibility and gives project teams genuine support. Every report it demands should have a named consumer; every standard should remove more friction than it adds.",
+          "Agree a weekly sampling plan with the client: a fixed number of calls per agent, plus extra reviews for new agents and anyone whose results dip. Random listening when there's time is not a QA program.",
+          "Run calibration sessions so team leaders, QA analysts and the client score the same call the same way.",
         ],
       },
       {
-        h: "Earning the right to govern",
+        h: "Every score becomes coaching",
         p: [
-          "PMOs fail when they are seen as overhead. The fastest route to credibility is service: solve real problems for project teams in the first ninety days, and governance stops feeling like inspection.",
+          "A score with no conversation changes nothing. Share specific moments from the recording, agree one thing to practise, and re-score within the week. Agents improve fastest when feedback is quick, specific and kind.",
         ],
       },
     ],
   },
   {
-    slug: "risk-registers-people-use",
-    category: "Risk Management",
-    title: "Risk registers that people actually use",
-    excerpt: "Most risk registers are written once at kickoff and reopened at the audit. Turning risk management into a working discipline takes three changes.",
+    slug: "speed-to-lead",
+    category: "Lead Generation",
+    title: "Speed to lead: why the first hour decides the sale",
+    excerpt: "An enquiry called back in minutes is far more likely to convert than one called back tomorrow. Here's how to build a follow-up process that never lets leads go cold.",
     date: "07 May 2026",
     readTime: "6 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "Why registers die",
+        h: "Interest fades fast",
         p: [
-          "Risk registers fail for predictable reasons: they are too long to review, scored so cautiously that nothing stands out, and owned so vaguely that no one acts. A register with ninety risks and no owners is not risk management — it is risk decoration.",
+          "A prospect who fills in a form is thinking about you right now. A few hours later they are thinking about something else — or talking to a competitor. Real estate launches, education intakes and insurance quotes all show the same pattern.",
         ],
       },
       {
-        h: "Three fixes",
+        h: "Build the route before the leads arrive",
         p: [
-          "First, cap the register. Twenty live risks, honestly scored, beat a hundred stale ones. Second, every risk gets a named owner with the authority to respond — not a department, a person. Third, review risks in the delivery meeting, not a separate ceremony nobody attends.",
+          "New leads should land in Salesforce automatically, be assigned to an available agent and trigger a call task straight away. Out-of-hours leads need a first-call rule for the next morning.",
+          "Set a cadence for leads you can't reach: several attempts across different times of day, a message, and then a nurture list — all tracked so nothing is forgotten.",
         ],
       },
       {
-        h: "Connecting risk to decisions",
+        h: "Measure it",
         p: [
-          "The test of a living risk process is whether it changes behaviour: contingency drawn down, dates moved early, scope traded before the risk lands. If risks never trigger decisions, the process is reporting, not managing.",
+          "Track time-to-first-call and contact rate by lead source every week. They are the two numbers that most often explain why one campaign converts and another doesn't.",
         ],
       },
     ],
   },
   {
-    slug: "status-reporting-without-theatre",
-    category: "Project Reporting",
-    title: "Status reporting without the theatre",
-    excerpt: "Weekly report writing consumes hours and changes nothing. Here's how to make reporting a by-product of delivery instead of a parallel industry.",
+    slug: "customer-support-service-levels",
+    category: "Customer Support",
+    title: "Service levels your customers can feel",
+    excerpt: "Answering quickly matters, but customers remember whether their problem was solved. Good support balances speed, first-contact resolution and a full case history.",
     date: "23 Apr 2026",
     readTime: "5 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "The cost of performative reporting",
+        h: "Agree what good looks like",
         p: [
-          "On many projects, the reporting cycle consumes a day a week of senior time — gathering updates, formatting decks, reconciling numbers that disagree with last week's version. That is time not spent delivering, and the output usually tells leadership less than a fifteen-minute honest conversation would.",
+          "Set a small number of service levels with the client: how fast calls, emails and chats are answered, how many issues are solved on first contact, and customer satisfaction after the interaction.",
         ],
       },
       {
-        h: "Report from the system, not the slide",
+        h: "Staff to the pattern, not the average",
         p: [
-          "The fix is structural: maintain one live source of project truth and generate reports from it. When the dashboard is the report, the weekly deck-writing ritual disappears and the numbers stop drifting between versions.",
+          "Contact volumes rise and fall by hour, day and season. Staffing to the average guarantees long queues at peak times. Use history from Salesforce and the phone system to schedule agents where demand really is.",
         ],
       },
       {
-        h: "Design for the reader",
+        h: "No customer should repeat themselves",
         p: [
-          "Executives need exceptions and decisions, not completeness. A great status report fits on one page: RAG against baseline, top risks with owners, decisions needed, and what changed since last time.",
+          "When every contact is logged against one case in Salesforce, any agent can pick up the conversation. That single change cuts handling time and frustration at the same time.",
         ],
       },
     ],
   },
   {
-    slug: "project-kickoff-first-30-days",
-    category: "Project Management",
-    title: "What good looks like: the first 30 days of a project",
-    excerpt: "Projects rarely recover from a weak start. The first month sets the trajectory — here is the sequence that gets it right.",
+    slug: "first-30-days-as-an-agent",
+    category: "Careers & Training",
+    title: "Your first 30 days as a Stream Biz agent",
+    excerpt: "What new agents can expect — from product training and mock calls to their first live shift, daily huddles and weekly coaching.",
     date: "09 Apr 2026",
-    readTime: "8 min read",
-    author: "Stream Biz Editorial Team",
-    sections: [
-      {
-        h: "Week one: clarity of purpose",
-        p: [
-          "Before any planning, write down what success means in measurable terms, who decides, and what is explicitly out of scope. If the sponsor cannot articulate the outcome in two sentences, the project is not ready to plan.",
-        ],
-      },
-      {
-        h: "Weeks two and three: structure",
-        p: [
-          "Stand up the skeleton: governance forums with real decision rights, a first-principles plan with named workstream owners, and the risk conversation while honesty is still cheap.",
-        ],
-      },
-      {
-        h: "Week four: rhythm",
-        p: [
-          "By day thirty the project should have its heartbeat: a weekly delivery rhythm, one source of truth for status, and a team that knows exactly what it is doing next. Momentum built now compounds; confusion tolerated now compounds faster.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "tools-follow-process",
-    category: "Digital Transformation",
-    title: "Digital project management: tools follow process",
-    excerpt: "Buying a project platform before designing the process is how organizations end up with expensive, empty dashboards.",
-    date: "26 Mar 2026",
     readTime: "6 min read",
     author: "Stream Biz Editorial Team",
     sections: [
       {
-        h: "The platform-first trap",
+        h: "Week 1: learn the client and the tools",
         p: [
-          "The demo is compelling, the licence is signed, and six months later the platform holds three stale project plans while the real work runs in spreadsheets and chat. The tool was never the constraint — the process was.",
+          "You'll learn the client's products, customers and common questions, practise the approved scripts and get hands-on Salesforce training: finding records, logging calls, booking callbacks and updating stages.",
         ],
       },
       {
-        h: "Design the workflow first",
+        h: "Week 2: mock calls and certification",
         p: [
-          "Map how information should move: who updates what, when, and who consumes it. Only then configure the tool to enforce that flow. A platform that mirrors a working process gets adopted; one that imposes an imaginary one gets ignored.",
+          "Trainers and team leaders play customers so you can practise real scenarios, including tough objections. When you pass certification, you're ready for live calls.",
         ],
       },
       {
-        h: "Adoption is the deliverable",
+        h: "Weeks 3–4: live calls with support",
         p: [
-          "Measure success by usage, not installation. The project is finished when the weekly report is generated from the platform without anyone being chased.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "leading-through-delivery-pressure",
-    category: "Leadership",
-    title: "Leading through delivery pressure",
-    excerpt: "Every serious project hits a period where everything is late and everyone is tired. How leaders behave in that window decides the outcome.",
-    date: "12 Mar 2026",
-    readTime: "5 min read",
-    author: "Stream Biz Editorial Team",
-    sections: [
-      {
-        h: "Pressure reveals the system",
-        p: [
-          "Under pressure, projects revert to their real culture. If bad news was punished in calm times, it will be hidden in hard times — precisely when leadership needs it most.",
-        ],
-      },
-      {
-        h: "What teams need from leaders mid-crisis",
-        p: [
-          "Three things: honesty about the position, decisiveness on the trade-offs, and protection from noise. The leader's job in a hard phase is to shrink the problem space, not to amplify the anxiety.",
-        ],
-      },
-      {
-        h: "Recovery is a plan, not a mood",
-        p: [
-          "Motivational speeches do not recover projects. A credible recovery plan does: re-baselined reality, a small number of decisive actions, and visible early wins that rebuild belief.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "reading-project-dashboard-sponsors",
-    category: "Industry Insights",
-    title: "Reading a project dashboard: a sponsor's field guide",
-    excerpt: "Five questions that cut through any status report — and the dashboard patterns that should make every sponsor suspicious.",
-    date: "25 Feb 2026",
-    readTime: "7 min read",
-    author: "Stream Biz Editorial Team",
-    sections: [
-      {
-        h: "Green is not a status",
-        p: [
-          "A wall of green RAG indicators tells you about the reporting culture, not the project. Healthy dashboards show movement: amber that turns green because actions worked, and red that gets named early.",
-        ],
-      },
-      {
-        h: "The five questions",
-        p: [
-          "What changed since last month? What is the forecast finish, and how has it moved? What are the top three risks and who owns them? What decisions do you need from me? And what are you not telling me because it isn't measured?",
-          "A project team that can answer all five crisply is a team in control of its delivery.",
-        ],
-      },
-      {
-        h: "Patterns that deserve a second look",
-        p: [
-          "Forecasts that always show recovery 'next quarter', milestones that slip one week at a time, and contingency that shrinks without corresponding risks closing — each is a signal to dig, not a number to accept.",
+          "You start live calls alongside experienced colleagues. Each shift begins with a team huddle, your calls are reviewed against the QA scorecard, and you get one-to-one coaching every week.",
+          "By the end of the month you'll know your targets, your dashboard and exactly what to work on next.",
         ],
       },
     ],
