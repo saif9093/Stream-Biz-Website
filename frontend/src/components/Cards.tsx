@@ -36,12 +36,9 @@ export function ServiceCard({ service, index = 0 }: { service: Service; index?: 
   );
 }
 
-// Bento rhythm for the 8-sector grid: 3 rows of 4 columns, wide tiles where the rows need them.
-const INDUSTRY_WIDE = new Set([0, 5, 6, 7]);
-
-export function IndustryCard({ industry, index = 0, wide = false }: { industry: Industry; index?: number; wide?: boolean }) {
+export function IndustryCard({ industry, index = 0 }: { industry: Industry; index?: number }) {
   return (
-    <Reveal delay={(index % 4) * 0.07} className={`h-full ${wide ? "sm:col-span-2" : ""}`}>
+    <Reveal delay={(index % 3) * 0.07} className="h-full">
       <Link
         to={`/industries/${industry.slug}`}
         data-testid={`industry-card-${industry.slug}`}
@@ -71,13 +68,11 @@ export function IndustryCard({ industry, index = 0, wide = false }: { industry: 
         </div>
         <div className="relative flex flex-col gap-2.5">
           <h3
-            className={`font-heading font-extrabold leading-tight tracking-tight text-white ${
-              wide ? "text-2xl sm:text-[1.7rem]" : "text-xl"
-            }`}
+            className="font-heading text-2xl font-extrabold leading-tight tracking-tight text-white"
           >
             {industry.title}
           </h3>
-          <p className={`text-sm leading-relaxed text-white/75 ${wide ? "max-w-md" : ""}`}>{industry.short}</p>
+          <p className="text-sm leading-relaxed text-white/75">{industry.short}</p>
           <span className="mt-2 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-brand-orange">
             Explore sector
             <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -94,9 +89,9 @@ export function IndustryCard({ industry, index = 0, wide = false }: { industry: 
 
 export function IndustryGrid({ industries, testId }: { industries: Industry[]; testId?: string }) {
   return (
-    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4" data-testid={testId}>
+    <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-testid={testId}>
       {industries.map((industry, i) => (
-        <IndustryCard key={industry.slug} industry={industry} index={i} wide={INDUSTRY_WIDE.has(i)} />
+        <IndustryCard key={industry.slug} industry={industry} index={i} />
       ))}
     </div>
   );

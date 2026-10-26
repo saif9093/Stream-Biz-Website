@@ -52,8 +52,8 @@ export default function About() {
           <Reveal delay={0.15}>
             <div className="overflow-hidden rounded-3xl border border-line shadow-2xl shadow-brand-navy/10">
               <img
-                src="/media/hero-3-planning.jpg"
-                alt="Stream Biz team leader briefing call center agents before a shift"
+                src="/media/svc-campaign-management.jpg"
+                alt="Stream Biz campaign manager briefing the team on live results"
                 loading="lazy"
                 className="aspect-[4/3] w-full object-cover"
               />
@@ -118,10 +118,10 @@ export default function About() {
           <Reveal>
             <div className="relative overflow-hidden rounded-3xl border border-white/15 shadow-2xl shadow-black/40">
               <img
-                src="/media/svc-quality-assurance.jpg"
-                alt="Stream Biz quality coach reviewing a recorded call with an agent"
+                src="/media/hero-2-controls.jpg"
+                alt="Stream Biz analysts reviewing campaign results on a live dashboard"
                 loading="lazy"
-                className="aspect-[4/5] w-full object-cover sm:aspect-[4/3] lg:aspect-[4/5]"
+                className="aspect-[4/5] w-full object-cover object-[32%_50%] sm:aspect-[4/3] lg:aspect-[4/5]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1430]/80 via-transparent to-transparent" aria-hidden="true" />
               <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-xl">

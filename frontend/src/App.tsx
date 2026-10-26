@@ -28,6 +28,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/services/:slug" element={<ServiceDetail />} />
         <Route path="/industries" element={<Industries />} />
+        <Route path="/industries/travel-hospitality" element={<Navigate to="/industries/travel-tourism" replace />} />
         <Route path="/industries/:slug" element={<IndustryDetail />} />
         <Route path="/how-we-work" element={<HowWeWork />} />
         {/* Case studies removed until real client work can be published; old links go home. */}

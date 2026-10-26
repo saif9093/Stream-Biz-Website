@@ -31,8 +31,8 @@ function EditorialBand() {
   return (
     <section ref={ref} className="grain relative overflow-hidden bg-navy-abyss" data-testid="editorial-band">
       <motion.img
-        src="/media/industry-telecom.jpg"
-        alt="Busy Stream Biz call center floor with agents on headsets"
+        src="/media/band-position.jpg"
+        alt="Leadership team planning a campaign roadmap in a Dubai boardroom"
         loading="lazy"
         style={{ y }}
         className="absolute inset-0 h-[120%] w-full object-cover"
