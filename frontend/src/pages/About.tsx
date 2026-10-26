@@ -15,7 +15,7 @@ const COMMITMENTS = [
 
 export default function About() {
   usePageMeta(
-    "About Stream Biz | Dubai Call Center",
+    "About Stream Biz | Project Management in Dubai",
     "Stream Biz is a Dubai call center that runs outbound sales, lead generation, appointment setting and customer support projects for clients — every campaign managed in Salesforce."
   );
 

@@ -82,8 +82,8 @@ function EditorialBand() {
 
 export default function Home() {
   usePageMeta(
-    "Stream Biz | Call Center Project Management & Salesforce Operations",
-    "Stream Biz is a Dubai call center that runs outbound sales, lead generation, appointment setting and customer support projects for clients — every campaign managed in Salesforce."
+    "Stream Biz | Project Management Services in Dubai",
+    "Stream Biz is a Dubai project management company that plans, runs and reports on client projects end to end — from sales and lead generation to customer engagement — with a dedicated contact center team and Salesforce behind every project."
   );
 
   return (

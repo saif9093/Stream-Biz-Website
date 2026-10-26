@@ -6,7 +6,7 @@ import { SITE_FAQS } from "@/data/site";
 
 export default function Faq() {
   usePageMeta(
-    "FAQ | Stream Biz Call Center Services",
+    "FAQ | Stream Biz",
     "Answers to common questions about Stream Biz call center services, Salesforce, call quality, languages, launch times and careers."
   );
 

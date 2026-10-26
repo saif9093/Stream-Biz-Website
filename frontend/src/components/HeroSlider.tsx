@@ -24,15 +24,15 @@ interface Slide {
 
 const SLIDES: Slide[] = [
   {
-    eyebrow: "Call Center Project Management",
-    tab: "Campaigns",
+    eyebrow: "Project Management Services",
+    tab: "Projects",
     lines: [
-      { text: "Every call." },
-      { text: "Every campaign." },
-      { text: "Managed to results.", accent: true },
+      { text: "Every project." },
+      { text: "Planned and run" },
+      { text: "to results.", accent: true },
     ],
-    sub: "Stream Biz is a Dubai call center that runs outbound sales, lead generation and customer support projects for clients — each one managed end to end in Salesforce.",
-    cta: { label: "Start a Campaign", to: "/start-a-project" },
+    sub: "Stream Biz is a Dubai project management company. We plan, staff and run client projects end to end — from sales and lead generation to customer engagement — with our own contact center team and Salesforce behind every one.",
+    cta: { label: "Start a Project", to: "/start-a-project" },
     cta2: { label: "Explore Our Services", to: "/services" },
     image: "/media/hero-1-delivery.jpg",
     imageAlt: "Stream Biz agents on headsets in a bright Dubai call center",

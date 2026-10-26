@@ -15,7 +15,7 @@ export default function IndustryDetail() {
   const industry = slug ? getIndustry(slug) : undefined;
 
   usePageMeta(
-    industry ? `${industry.title} Call Center Services | Stream Biz` : "Industry | Stream Biz",
+    industry ? `${industry.title} Projects | Stream Biz` : "Industry | Stream Biz",
     industry?.short
   );
 

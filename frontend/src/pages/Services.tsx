@@ -6,7 +6,7 @@ import { SERVICES } from "@/data/services";
 
 export default function Services() {
   usePageMeta(
-    "Call Center Services | Stream Biz",
+    "Services | Stream Biz Project Management",
     "Eight managed call center services — outbound sales, lead generation, appointment setting, customer support, retention, Salesforce CRM operations and quality assurance."
   );
 
