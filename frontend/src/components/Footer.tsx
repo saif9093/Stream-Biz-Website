@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowRight, Globe, Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "./Logo";
 import { SERVICES } from "@/data/services";
 import { INDUSTRIES } from "@/data/industries";
-import { OFFICE, officeDirections } from "@/data/site";
+import { CONTACT, OFFICE, officeDirections } from "@/data/site";
 
 const columns = [
   {
@@ -63,14 +63,18 @@ export default function Footer() {
                   ))}
                 </span>
               </a>
-              <span className="flex items-center gap-2.5 text-white/45">
+              <a href={CONTACT.emailHref} data-testid="footer-email" className="flex items-center gap-2.5 transition-colors hover:text-white">
                 <Mail className="h-4 w-4 shrink-0 text-brand-orange" />
-                [work email]
-              </span>
-              <span className="flex items-center gap-2.5 text-white/45">
+                {CONTACT.email}
+              </a>
+              <a href={CONTACT.phoneHref} data-testid="footer-phone" className="flex items-center gap-2.5 transition-colors hover:text-white">
                 <Phone className="h-4 w-4 shrink-0 text-brand-orange" />
-                [phone number]
-              </span>
+                {CONTACT.phone}
+              </a>
+              <a href={CONTACT.websiteUrl} target="_blank" rel="noopener noreferrer" data-testid="footer-website" className="flex items-center gap-2.5 transition-colors hover:text-white">
+                <Globe className="h-4 w-4 shrink-0 text-brand-orange" />
+                {CONTACT.website}
+              </a>
             </div>
             <Link
               to="/project-health-check"

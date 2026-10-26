@@ -214,5 +214,13 @@ export const OFFICE = {
   full: "Office # 2, Mezzanine Floor, Silver Building, Hor Al Anz East, Dubai, U.A.E",
   mapQuery: "Silver Building, Hor Al Anz East, Dubai, United Arab Emirates",
 };
+export const CONTACT = {
+  phone: "04 886 0107",
+  phoneHref: "tel:+97148860107",
+  email: "info@streambiz.ae",
+  emailHref: "mailto:info@streambiz.ae",
+  website: "www.streambiz.ae",
+  websiteUrl: "https://www.streambiz.ae",
+};
 export const officeMapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(OFFICE.mapQuery)}&z=16&output=embed`;
 export const officeDirections = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE.mapQuery)}`;

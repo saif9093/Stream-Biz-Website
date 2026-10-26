@@ -9,7 +9,7 @@ const CONTENT: Record<string, { title: string; sections: { h: string; p: string 
     sections: [
       { h: "What we collect", p: "When you submit a form on this website, we collect the details you provide — name, company, work email, phone number and campaign information — solely to respond to your enquiry." },
       { h: "How we use it", p: "Your information is used to review your requirements, contact you about your enquiry and, where relevant, prepare a proposal. We do not sell or share your data with third parties for marketing." },
-      { h: "Retention & your rights", p: "You may request access to, correction of, or deletion of your personal data at any time by contacting us. [Placeholder — replace with the official policy before launch.]" },
+      { h: "Retention & your rights", p: "You may request access to, correction of, or deletion of your personal data at any time by emailing info@streambiz.ae. [Placeholder — replace with the official policy before launch.]" },
     ],
   },
   "/terms": {

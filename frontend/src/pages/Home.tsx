@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowRight, Calculator, MapPin } from "lucide-react";
+import { ArrowRight, Calculator, Mail, MapPin, Phone } from "lucide-react";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import { Reveal, CountUp, EASE } from "@/components/Reveal";
 import { SectionHeading, Eyebrow, btnPrimary, btnGhost } from "@/components/Section";
@@ -21,7 +21,7 @@ import { getIcon } from "@/lib/icons";
 import { SERVICES } from "@/data/services";
 import { INDUSTRIES } from "@/data/industries";
 import { ARTICLES } from "@/data/insights";
-import { PROBLEM_CARDS, SITE_FAQS, NEXT_STEPS, OFFICE, officeDirections } from "@/data/site";
+import { CONTACT, PROBLEM_CARDS, SITE_FAQS, NEXT_STEPS, OFFICE, officeDirections } from "@/data/site";
 
 function EditorialBand() {
   const ref = useRef<HTMLElement>(null);
@@ -524,6 +524,16 @@ export default function Home() {
                   <span className="mt-1.5 text-xs font-bold text-brand-navy group-hover:text-brand-orange">Get directions →</span>
                 </span>
               </a>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                <a href={CONTACT.phoneHref} data-testid="home-phone" className="flex items-center gap-3 rounded-2xl border border-line bg-soft p-4 text-sm font-bold text-ink transition-colors hover:border-brand-orange/50 hover:bg-white">
+                  <Phone className="h-4 w-4 shrink-0 text-brand-orange" />
+                  {CONTACT.phone}
+                </a>
+                <a href={CONTACT.emailHref} data-testid="home-email" className="flex items-center gap-3 rounded-2xl border border-line bg-soft p-4 text-sm font-bold text-ink transition-colors hover:border-brand-orange/50 hover:bg-white">
+                  <Mail className="h-4 w-4 shrink-0 text-brand-orange" />
+                  {CONTACT.email}
+                </a>
+              </div>
             </Reveal>
           </div>
           <Reveal delay={0.1}>

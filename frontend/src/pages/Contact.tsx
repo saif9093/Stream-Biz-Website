@@ -3,7 +3,7 @@ import { PageHero } from "@/components/Section";
 import { Reveal } from "@/components/Reveal";
 import LeadForm from "@/components/LeadForm";
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { NEXT_STEPS, OFFICE, officeDirections, officeMapEmbed } from "@/data/site";
+import { CONTACT, NEXT_STEPS, OFFICE, officeDirections, officeMapEmbed } from "@/data/site";
 
 export default function Contact() {
   usePageMeta(
@@ -75,8 +75,9 @@ export default function Contact() {
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
                   <div className="flex flex-col gap-1.5 border-t border-line pt-4 text-sm text-faint">
-                    <p>Email: [work email]</p>
-                    <p>Phone: [phone number]</p>
+                    <p>Email: <a href={CONTACT.emailHref} className="font-semibold text-brand-navy hover:text-brand-orange">{CONTACT.email}</a></p>
+                    <p>Phone: <a href={CONTACT.phoneHref} className="font-semibold text-brand-navy hover:text-brand-orange">{CONTACT.phone}</a></p>
+                    <p>Web: <a href={CONTACT.websiteUrl} target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-navy hover:text-brand-orange">{CONTACT.website}</a></p>
                   </div>
                 </div>
               </div>
